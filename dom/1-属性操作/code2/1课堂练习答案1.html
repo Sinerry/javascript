@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			border: 5px solid;
+		}
+
+		.red {
+			background: red;
+		}
+		.green {
+			background: green;
+		}
+		.blue {
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+	<button id="to_red">变红</button>
+	<button id="to_blue">变蓝</button>
+	<button id="to_green">变绿</button>
+	<script>
+		// 点击按钮改变div背景色 
+
+		// 1. 获取要操作的元素
+		var oBtnRed =  document.getElementById("to_red"),oBtnBlue =  document.getElementById("to_blue"),oBtnGreen =  document.getElementById("to_green"),
+			oBox = document.getElementById("box");
+		// 给按钮添加事件 
+
+		// 2. 给每个按钮添加单击事件 
+		/*oBtnRed.onclick = function() {
+			oBox.style.backgroundColor = 'red';
+		};
+		oBtnGreen.onclick = function() {
+			oBox.style.backgroundColor = 'green';
+		};
+		oBtnBlue.onclick = function() {
+			oBox.style.backgroundColor = 'blue';
+		};*/
+
+		/*oBtnRed.onclick = function() {
+			oBox.className = 'red';
+		};
+		oBtnGreen.onclick = function() {
+			oBox.className = 'green';
+		};
+		oBtnBlue.onclick = function() {
+			oBox.className = 'blue';
+		};*/
+
+		
+		// 为啥这样不行了 ???  
+		// oBtnRed.onclick = function() {
+		// 	oBox.style.backgroundColor = 'red';
+		// };
+		// oBtnGreen.onclick = function() {
+		// 	oBox.className = 'green';
+		// };
+		// oBtnBlue.onclick = function() {
+		// 	oBox.style.backgroundColor = 'blue';
+		// };
+
+
+
+
+
+
+
+
+
+	</script>
+</body>	
+</html>

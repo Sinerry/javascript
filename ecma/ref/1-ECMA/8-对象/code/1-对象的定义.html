@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/*
+			定义一个对象描述付子豪
+
+			姓名  付子豪
+			性别  女
+			婚否  已婚
+			爱好  踢球、编码、美食
+
+			行为  学习、射门
+
+
+		*/
+		// 字面量法定义对象 
+		var obj = {
+			name: '付子豪',
+			sex: '女',
+			isMarried: true,
+			hobby: ['踢球','编码','美食'],
+			study: function() {
+				console.log('学习');
+			},
+			shoot: function() {
+				console.log('射门');
+			}
+		};
+
+		// 1.获取名字
+		var name = obj.name ;// obj 的 name属性 
+		// console.log(name);
+		// 2.获取性别
+		var sex = obj.sex;
+		console.log(sex);
+
+		// 3.获取方法
+		obj.study();
+
+		// new构造函数法(new Object())
+		// var obj = new Object();
+		// console.log(obj);
+
+
+
+	</script>
+</body>
+</html>

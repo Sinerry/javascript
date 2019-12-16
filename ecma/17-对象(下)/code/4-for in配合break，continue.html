@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="box">
+		<h3>当前用户信息：</h3>
+	</div>
+	<script>
+		var obj = {
+			name: "狗蛋",
+			age: 18,
+			sex: "m",
+			height: 170,
+			weight: 120,
+			address: "北京市昌平区"
+		};
+		// 遍历对象 
+		for(var attr in obj) {
+			if(attr === 'sex') {
+				// break;
+				continue;
+			}
+			console.log(attr,obj[attr]);
+		}
+
+		
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+	
+
+
+
+
+
+
+
+
+</body>
+</html>

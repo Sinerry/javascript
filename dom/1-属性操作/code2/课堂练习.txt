@@ -1,0 +1,28 @@
+课堂练习：
+1. 实现li的隔行变色
+<ul>
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+	<li>d</li>
+	<li>e</li>
+	<li>f</li>
+	<li>g</li>
+</ul>
+
+2. 在上题的基础上，鼠标移入每个li背景变黑，移出恢复原来的背景色
+
+
+3.定义一个给元素添加class的方法，
+<div id="box" class="box goudan"></div>
+再添加'box wrap wrap'
+<div id="box" class="box goudan wrap" dachui="dachui"></div>
+
+4.定义一个给元素删除class的方法，
+<div id="box" class="box goudan"></div>
+删除'box wrap'
+<div id="box" class="goudan" dachui="dachui"></div>
+
+
+
+

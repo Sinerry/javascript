@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		span {
+			color: red;
+			font-weight: 700;
+			font-size: 24px;
+		}
+
+		#wrap {
+			width: 200px;
+			height: 100px;
+			line-height: 100px;
+			margin: 100px auto;
+			text-align: center;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+	<div id="wrap">
+		
+	</div>
+	<script>
+		//验证码：数字，大小写字母组成的4位字符串
+
+		/*
+			'0' - '9'  	48 - 57
+			'A' - 'Z'  	65 - 90
+			'a' - 'z'  	97 - 122 
+
+
+
+			生成 [48 , 122]  之间随机整数 
+		*/
+
+
+		// 封装一个获取两个数之间的随机整数的方法
+		function getRandom(min,max) {
+			return Math.floor(Math.random() * (max - min + 1) + min);
+		}
+		// 封装一个获取两个数之间的随机整数的方法
+		// function getRandom(min,max) {
+		// 	return Math.round(Math.random() * (max - min) + min);
+		// }
+		// 如果random的值是[58,64]或者[91,96]无效
+		// function getValidateCode() {
+		// 	var str = '';
+		// 	for(var i = 1;i <= 4; i++) {
+		// 		var random = getRandom(48,122);
+		// 		if(random >= 58 && random <= 64 || random >= 91 && random <= 96) {
+		// 			i--;
+		// 		}else {
+		// 			str += String.fromCharCode(random);
+		// 		}
+		// 		// random >= 58 && random <= 64 || random >= 91 && random <= 96 
+		// 		// ? i-- : str += String.fromCharCode(random);
+		// 	}
+		// 	return str;
+		// }
+		// console.log(getValidateCode());
+
+
+		// 做一个当前的时间展示
+
+		// setInterval(function() {
+		// 	// 每隔一秒执行一次 
+		// 	getTime();
+		// },1000);
+
+		// // 页面打开调用一次
+		// getTime();
+			// 封装一个获取当前时间的函数
+
+		/*function getTime() {
+			var d = new Date();
+			// year
+			var year = d.getFullYear();
+			// month
+			var month = d.getMonth() + 1;
+			// date 
+			var date  = d.getDate();
+			// hour 
+			var hour = d.getHours();
+			// minute
+			var minute = d.getMinutes();
+			// second
+			var second = d.getSeconds();
+			// day
+			var day = d.getDay();
+
+			var weekDay = '';
+			switch(day) {
+				case 0:
+					weekDay = "星期天";
+					break;
+				case 1:
+					weekDay = "星期一";
+					break;
+				case 2:
+					weekDay = "星期二";
+					break;
+				case 3:
+					weekDay = "星期三";
+					break;
+				case 4:
+					weekDay = "星期四";
+					break;
+				case 5:
+					weekDay = "星期五";
+					break;
+				case 6:
+					weekDay = "星期六";
+					break;
+			} 
+
+
+			// 添加到box中
+			box.innerHTML = "今年是<span>" + year + "</span>年<span>" + toDouble(month) + "</span>月<span>" + toDouble(date) + "</span>日,当前时间是<span>" + toDouble(hour) + "</span>:<span>" + toDouble(minute) + "</span>:<span>" + toDouble(second) + "</span>,<span>" + weekDay + "</span>";
+		}
+
+		// 将一个数字转两位数
+		function toDouble(n) {
+			return n >= 10 ? n : '0' + n;
+		}*/
+
+
+
+
+		// 做一个随机点名
+
+		var array = ["狗蛋","大锤","幺妹","靓仔","杨过","小龙女","雕","周伯通","熊大","熊二","喜洋洋","灰太狼"];
+		// 开始定时器
+		var timerId = setInterval(function(){
+			// 获取一个随机下标 
+			var index = getRandom(0,array.length - 1);
+			// 给wrap添加内容 
+			wrap.textContent = array[index];
+		},1000/60);
+		// 点击文档停止
+		document.onclick = function() {
+			// 关闭定时器
+			clearInterval(timerId);
+
+		};
+
+
+		// "html&&css&&javascript&&vue"  -->  Html&&Css&&Javascript&&Vue
+		/*var str = "html&&css&&javascript&&vue";
+		// 1. 切开，得到一个字符串数组
+		var array = str.split('&&');
+		// 2. 遍历数组
+		for(var i = 0; i < array.length; i++) {
+			array[i] = array[i].charAt(0).toUpperCase() + array[i].substr(1);
+		}
+		// 3. join
+		console.log(array.join('&&'));*/
+
+
+
+
+		// 1.获取用户名
+		var username = prompt("请输入用户名:");
+
+		// 2. 规则校验
+		// 2.1 长度 6 - 20之间
+		if(username.length < 6 || username.length > 20) {
+			alert("用户名长度不符合规范,长度是6到20之间")
+		}else if(username.charCodeAt(0) >=48 && username.charCodeAt(0) <= 57) {
+			alert("用户名以数字开头")
+		}else {
+			// 如果代码走到这里，表示长度满足，并且是不是数字开头
+			// 检测用户名只能由字母，数字，下划线组成 
+			/*
+				思路：需要取出username中每个字符，检测其是不是字母，数字，下划线，
+
+				如果没位都是字母或数字或下划线，则输入正确，
+				否则输入错误（只要有个字符不是数字或者不是字母或者不是下划线）
+
+
+			*/
+			for(var i = 0; i < username.length; i++) {
+				// 假设username正确
+				var flag = true;
+				var c = username.charAt(i);
+				if(!(c >= '0' && c <= '9' ||  c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' || c === '_')) {
+					// 经过检测，一旦发现有一个字符不是数字，字母，下划线，则证明username不正确
+					flag = false;
+					// 跳出循环 
+					break;
+				}
+			} 
+			// 检测完毕之后，如果flag依旧为true，则username正确，否则不正确
+			if(flag) {
+				alert("正确");
+			}else {
+				alert("你输入有误，你输入了" + c + "字符");
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			background: red
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		var oBox = document.getElementById("box");
+
+		function fn() {
+			this.style.background = '#000';
+		}
+ 		// IE8及其以下低版本下绑定
+		// oBox.attachEvent("onmouseenter",function() {
+		// 	console.log(this);// this指向window对象，不指向事件源
+		// });
+
+		// 绑定
+		oBox.attachEvent("onmouseenter",fn);
+		// 解绑 
+		oBox.detachEvent("onmouseenter",fn);
+	</script>
+</body>
+</html>

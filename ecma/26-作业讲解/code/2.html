@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		//检测一个字符串是不是qq号
+		/*
+			qq号的规则：
+				1. 长度5 - 10 
+				2. 不能以零开头
+				3. 全是数字
+
+		*/
+
+		// function isQQ(qq) {
+		// 	// 1. 检测长度
+		// 	if(qq.length < 5 || qq.length > 10) {
+		// 		return false;
+		// 	// 2. 检测是否以零开头
+		// 	}else if(qq.charAt(0) === '0') {
+		// 		return false;
+		// 	// 3. 检测是否全是数字
+		// 	}else {
+		// 		for(var i = 0; i < qq.length; i++) {
+		// 			// 4. 从反面思考，找到一个不是数字的，就不是qq号
+		// 			if(isNaN(qq.charAt(i))) {
+		// 				return false;
+		// 			}
+		// 		}
+		// 	}
+		// 	return true;
+		// }
+
+
+		// function isQQ(qq) {
+		// 	if(isNaN(qq)|| Number(qq) !== parseInt(qq) || 
+		// 		qq.length < 5 || qq.length >10 
+		// 		|| qq.charAt(0) === '0'){
+		// 		return false;
+		// 	}
+		// 	return true;
+		// }
+		// console.log(isQQ("534.435"));
+
+		// console.log(isQQ("2345343"));
+
+		// hello， 输出为h e l l o
+		// var s = "hello";
+		// var ret = s.split('').join(' ');
+		// 如何从一个字符串中提取一个子字符串，例如：获取一个文件的后缀名
+
+
+		/*var filename = "C:/user/desktop/1.html";
+		var index = filename.lastIndexOf('.');
+		// 做一个校验，index存在，才截取，否则给出提示信息
+		if(index !== -1) {
+			var ret = filename.slice(index);
+			console.log(ret);
+		}else {
+			console.log("此文件没有扩展名，老子截不了");
+		}*/
+
+
+		/*
+			'https://www.taobao.com/product?id=10001&name=oppo&size=10#goods'
+			得到
+
+			{id:10001,name:"oppo",size:10}
+
+			*/
+
+		var str = "https://www.taobao.com/product?id=10001&name=oppo&size=10#goods";
+
+
+
+		// 1. 提取 从？到# 之间的字符串
+
+		// 问号的下标
+		var questionMarkIndex = str.indexOf('?');
+		// 井号的下标
+		var poundSignIndex = str.lastIndexOf('#');
+		var obj = {};
+
+		// 截取
+		if(questionMarkIndex !== -1 && poundSignIndex !== -1) {
+			var substr = str.slice(questionMarkIndex + 1,poundSignIndex);
+			// var substr = str.substring(questionMarkIndex + 1,poundSignIndex);
+			// var substr = str.substr(questionMarkIndex + 1,poundSignIndex - questionMarkIndex - 1);
+
+			// 遍历substr
+			var array = substr.split('&')
+			for(var i = 0; i < array.length; i++) {
+				var key = array[i].split('=')[0];
+				var value = array[i].split('=')[1];
+				obj[key] = isNaN(Number(value)) ?  value : Number(value);
+			}
+			console.log(obj);
+		}
+			
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+		//"aadbCFfdc"
+		var s = 'aadbCFfdc';
+		var array = s.split('');
+		for(var i = 0; i < array.length; i++) {
+			for(var j = i + 1; j < array.length; j++) {
+				if(array[i].toLowerCase() === array[j].toLowerCase()){
+					array.splice(j,1);
+					j--;
+				}
+			}
+		}
+		console.log(array.join(''));// 'adbCF';
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

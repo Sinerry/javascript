@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var array = [1,4,3,1,1,2,3,2];
+		/*
+			思路：
+				让array的每一项与其后面每一项依次做比较，如果发现后面的存在与前面全等（===），此时后者就重复出现了，我们需要把后者删除
+			
+
+			第一次做比较：
+				取出array的第一项，取出1，让1后面的每个值做比较 
+
+
+
+
+		*/
+		// array[0]
+
+		//第一次做比较：
+		//		取出array的第一项，取出1，让1后面的每个值做比较 
+		// array = [1,4,3,1,2,3,2];
+		for(var i = 1; i < array.length; i++) {
+			if(array[0] === array[i]) {
+				array.splice(i,1);
+				i--;
+			}
+		}
+		// console.log(array);// [1,4,3,2,3,2];
+
+
+
+		// 取出数组第二项 依次与后面的做比较
+		for(i = 2; i < array.length; i++) {
+			if(array[1] === array[i]) {
+				array.splice(i,1);
+				i--;
+			}
+		}
+
+
+		//  取出数组第三项 依次与后面的做比较
+
+		for(i = 3; i < array.length; i++) {
+			if(array[2] === array[i]) {
+				array.splice(i,1);
+				i--;
+			}
+		}
+
+		// console.log(array);// [1,4,3,2,2];
+
+
+		//  取出数组第四项 依次与后面的做比较
+
+		for(i = 4; i < array.length; i++) {
+			if(array[3] === array[i]) {
+				array.splice(i,1);
+				i--;
+			}
+		}
+
+		console.log(array);
+
+
+
+		/*
+			第一次循环：
+				i = 1
+				1 < 8     true
+				1  === 4  false  if进不去
+				i++;// i = 2
+			第二次循环：
+				i = 2
+				2 < 8   true 
+
+				1 === 3   false if进不去
+
+				i++;// i = 3
+			第三次循环：
+				i = 3
+				3 < 8
+
+				1 === 1   true  进入if
+				array.splice(3,1);
+				i++;// i = 4
+
+			第四次循环：
+				i = 4;
+				4 < 7   true  
+				1 === 2    false  if进不去
+				i++;// i = 5
+			第五次循环：
+				i = 5
+				5 < 7
+				1 === 3   false  if进不去
+				i++;// i = 6
+			第六次循环：
+				i = 6;
+				6 < 7    true  	
+				1 === 2   false if进不去
+				i++;// 7 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		*/	
+
+		// console.log(array);//  [1,4,3,2,3,2];
+
+
+
+
+
+	</script>
+</body>
+</html>

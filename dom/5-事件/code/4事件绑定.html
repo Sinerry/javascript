@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			background: red
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		var oBox = document.getElementById("box");
+
+
+		// 事件注册
+		// oBox.onclick = function() {
+		// 	alert(1);
+		// };
+		// 覆盖前面的
+		// oBox.onclick = function() {
+		// 	alert(2);
+		// };
+
+
+
+		// 事件绑定
+		oBox.addEventListener("click",function() {
+			alert(1);
+			// console.log(this);
+		},true);
+
+
+
+
+
+		oBox.addEventListener("click",function() {
+			alert(2);
+		},false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/*
+			oBox的真面目
+			{
+				id: "box",
+				className: "",
+				style: {
+					width: "",
+					height: ""
+				},
+				onclick: function() {
+			alert(2);
+		};
+			}
+
+			oBox.onclick();
+		*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

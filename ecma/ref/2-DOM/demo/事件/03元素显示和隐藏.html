@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button id="show">显示</button>
+    <button id="hide">隐藏</button>
+    <div id="box">123</div>
+    <script>
+        // 单击显示按钮 div显示 
+        // 1 找到事件源和相关元素
+        var oShow = document.getElementById("show");
+        var oHide = document.getElementById("hide");
+        var oDive = document.getElementById("box");
+        // 2 注册单击事件
+        oShow.onclick = function() {
+            // 3 事件处理程序 让div显示 display:block 
+            oDive.style.display = "block";
+            oDive.style.width = "300px";
+            oDive.style.color = "red";
+        }
+
+        // 单击隐藏按钮 div隐藏 
+        oHide.onclick = function() {
+            // 3 事件处理程序 让div隐藏 display:none
+            oDive.style.display = "none";
+        }
+    </script>
+</body>
+</html>

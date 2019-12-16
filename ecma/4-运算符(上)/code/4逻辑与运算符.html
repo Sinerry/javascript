@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/*
+			刚才那个场景，如何用js程序描述出来
+			逻辑与： 两把锁，两把钥匙同时取到 
+
+			能不能把钱取到手
+
+
+		*/
+
+
+
+		// 先给两把钥匙编号，定义变量表示，两把钥匙，分别编号1 和  2，用真实的钥匙与狗蛋获取的钥匙做匹配 
+		// 第一把钥匙编号为1
+		var key1 = 1;
+		// 第二把钥匙编号为2
+		var key2 = 2;
+
+		// 	狗蛋取了两把钥匙 
+		var key3 = 1;
+		var key4 = 3;
+
+		var isSuccess = 
+			key3 === key1 && key4 === key2;
+			/*	
+				1 === 1 && 3 === 2
+				true && false
+
+				false 
+			*/
+
+
+		console.log(isSuccess);// true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

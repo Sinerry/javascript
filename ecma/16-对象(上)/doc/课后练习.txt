@@ -1,0 +1,55 @@
+1.定义一本图书对象，包含书名，作者，类别特征，
+  阅读，燃烧的功能
+
+2.修改书名，删除类别，增加页码，访问图书的所有属性
+
+3. 尝试完成下面的：
+
+	对于如下代码，每次弹窗多少？
+	var a = 2;
+	var b = a++;
+	var obj = {
+		a: 3,
+		b: 1,
+		c: function() {
+			alert(a);
+			alert(this.a);
+			this.b++;
+			b--;
+			return a + this.b;
+		}
+	}
+	console.log(obj.c());
+	var d = obj.c;
+	d();
+	d();
+
+	
+	对于如下代码，每次弹窗多少？
+	var a = 2;
+	var b = 0;
+	var obj = {
+		a: 3,
+		b: 1,
+		c: function(a) {
+			alert(a);
+			alert(this.a);
+			b++;
+			var a = 1;
+			this.b--;
+			return this.a + b;
+		}
+	}
+	console.log(obj.c(a));
+	var d = obj.c;
+	d(b);
+	d(b);
+
+
+
+
+
+
+
+
+

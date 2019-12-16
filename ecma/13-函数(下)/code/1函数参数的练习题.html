@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		 // 1. 获取用户输入 
+		 // var num = Number(prompt("请输入一个整数："));
+		 // // 2. 判断 
+		 // if(num % 2 === 0) {
+		 // 	console.log("偶数");
+		 // }else {
+			// console.log("奇数");
+		 // }
+
+		/* // 定义函数
+		 function isEven(num) {
+			if(num % 2 === 0) {
+		 		console.log("偶数");
+			 }else {
+				console.log("奇数");
+			 }
+		 }
+
+		 // 调用函数 
+		 isEven(10);
+		 isEven(22);
+		 isEven(45);*/
+
+
+		 // 1. 获取数字
+		 // var num = Number(prompt("请输入一个正整数："));
+		 // 2. 检测
+
+
+		
+
+		 /*
+			素数： 除了1和本身，不能再被别的数整除的数，否则叫合数
+
+
+		 */
+
+		 function isPrime(n) {
+
+		 	var flag = true;// 假设是素数 
+		 	for(var i = 2; i < n; i++) {
+		 		if(n % i === 0) {
+					flag = false;// 重置flag 为false
+		 			break;// 跳出循环 
+		 		}
+		 	}
+		 	// 经过循环检测之后，如果flag依旧为true，说明if条件始终没有成立过，
+		 	if(flag) {
+		 		console.log("Yes");
+		 	}else {
+		 		console.log("No");
+		 	}
+		 }
+
+
+		 /*function add(a,b) {
+		 	console.log(a + b);
+		 }
+
+		 add(1,2);
+		 add(100,99);*/
+
+
+		 // function area(r) {
+		 // 	console.log(3.14 * r * r);
+		 // }
+
+		 // area(3);
+		 // area(2);
+
+		 function operate(x,y,opera) {
+		 	switch(opera) {
+		 		case '+':
+		 			console.log(x+y);
+		 			break;
+		 		case '-':
+		 			console.log(x-y);
+		 			break;
+		 		case '*':
+		 			console.log(x*y);
+		 			break;
+		 		case '/':
+		 			console.log(x/y);
+		 			break;
+		 		case '%':
+		 			console.log(x%y);
+		 			break;
+		 	}
+		 }
+		 operate(1,2,'*');
+		 // operate(1,2,'/');
+		 // operate(1,2,'-');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

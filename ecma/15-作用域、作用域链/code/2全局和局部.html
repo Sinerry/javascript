@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// var x = 99;
+		// function fn() {
+		// 	var x = 2;// 局部 
+		// 	alert(x);
+		// }
+		// fn();
+		// alert(x);// x is not defined
+
+
+		// var x = 99;
+		// function fn() {
+		// 	x = 2;
+		// 	alert(x);// 
+		// }
+		// fn();
+		// alert(x);// 
+
+
+		// var x = 1;
+		// function fn() {
+		// 	x = 2;
+		// 	function fn2() {
+		// 		x = 3;
+		// 		alert(x);
+		// 	}
+		// 	fn2();
+		// 	alert(x);
+		// }
+		// fn();
+		// alert(x);
+		
+
+		// 作用域链
+		var x = 1;
+		function fn() {
+			var x = 2;
+			function fn2() {
+				alert(x);// 2
+			}
+			fn2();
+			alert(x);// 2
+		}
+		fn();
+		alert(x);// 1
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

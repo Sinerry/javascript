@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script >
+		/*function test(a, b) {
+		　　alert(a);
+		　　alert(b);
+		　　var b = 234;
+		　　alert(b);
+		　　a = 123;
+		　　alert(a);
+
+		　　function a() {
+
+		   };
+		　　b = 234;
+		　　var b = function () {
+
+		   };
+		　　alert(a);
+		　　alert(b); 
+	    }
+		test(1);
+		
+			代码是从26行开始执行的	
+			test(1)
+				===> 
+					1. 定义
+						var b;
+						function a() {
+
+		   				};
+					有名函数与变量重名时,浏览器在解析JS代码定义阶段时，函数的优先级高于变量
+					2. 执行 
+						alert(a);// function a() {
+
+		   				};
+		   				alert(b);// undefined
+						b = 234;
+						alert(b);// 234
+						a = 123;
+						alert(a);//123
+						b = 234;
+						b = function () {
+
+		   				};
+		   				alert(a);//123
+		   				alert(b);// function () {
+
+		   				};
+
+				 <====
+		*/
+
+
+
+		alert(a);// undefined
+		var a = 100;　
+		function testResult() {　　
+		　　var b = 2 * a;　// 2 * undefined = NaN
+		　　var a = 200;　　
+		　　var c = a / 2;　// c = 100
+		　　alert(b);
+		　　alert(c);
+		}
+		testResult();
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

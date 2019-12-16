@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			background: red
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		var oBox = document.getElementById("box");
+ 		// 绑定
+		oBox.addEventListener("mouseenter",function() {
+			this.style.background = '#000';
+		});
+		// 解绑 
+		oBox.removeEventListener("mouseenter",function() {
+			this.style.background = '#000';
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var array = [
+			88,
+			77,
+			99,
+			66
+		];
+
+
+		// 访问
+		// console.log(array[3]);// 88
+		// var sum = array[0] + array[1] + array[2] + array[3];
+		//console.log(sum);
+
+		// 
+
+
+		// i表示下标，下标从零开始，最大下标是length - 1
+
+		var array = [
+			88,
+			77,
+			99,
+			66
+		];
+
+		// 0 + 88 + 77 + 99 + 66
+
+		var sum = 0;
+		// 数组的遍历
+		for(var i = 0; i < 4; i++) {
+			sum += array[i];
+		}
+		/*
+		
+			第一次循环： 
+				i = 0
+				0 < 4   true  
+
+				sum += 88;  sum = sum + 88 = 0 + 88 
+
+				i++;// i = 1
+
+			第二次循环：
+				i = 1
+
+				1 < 4   true  
+
+				sum += array[i] ===> sum = sum + array[i] = 0 + 88 + 77 
+
+				i++;// i = 2
+
+			第三次循环：
+				i = 2
+
+				2 <  4    true 
+
+				sum += array[i] ===> sum = sum + array[i] = 0 + 88 + 77 + 99
+
+				i++;// i = 3
+
+			第四次循环：
+				i = 3
+				3 < 4    true
+				sum += array[i] ===> sum = sum + array[i] = 0 + 88 + 77 + 99 + 66
+
+				i++;// i = 4
+				
+
+
+		*/
+
+
+
+	</script>
+</body>
+</html>

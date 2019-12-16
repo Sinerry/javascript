@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		function printRect(row,col) {
+			for(var i = 1; i <= row; i++) {
+				for(var j = 1; j <= col; j++) {
+					document.write('* ');
+				}
+				document.write('<div></div>');
+			}
+			document.write('<hr/>');
+		}
+
+
+		/*
+			由printRect函数我们可以看出 
+			它只能打印3行5列的矩形,这样太
+			死板了,太局限了。
+			那如何让这个函数可以实现打印任何
+			行数和列数的矩形呢?
+
+			让这个函数变得更通用？？？
+
+
+
+
+
+		*/ 
+
+		printRect(3,7);
+		
+
+
+
+
+
+
+
+
+		printRect(4,2);
+		printRect(12,6);
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+课堂练习：
+1. 下列代码，每次弹窗多少？
+
+   var x = 10;
+   var y = 3;
+
+   var z = x > y && x === y;
+
+   alert(z);
+
+   z = x > y && x % y <= y;
+   alert(z);
+   y %= x;
+
+   z = x % 2 !== 0 && y % x > 0 && y <= x;
+   alert(z);
+
+   z = x >= y && y++;
+   alert(z);
+   z = x <= y && y++
+   alert(z);
+   alert(y);
+   z = x <= y && y++ && x++;
+   alert(z);
+   alert(y);
+   alert(x);
+
+
+
+
+
+

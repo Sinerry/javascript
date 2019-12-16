@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="item">a</li>
+		<li class="item">b</li>
+		<li class="item">c</li>
+		<li class="item">d</li>
+	</ul>
+	<ol>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ol>
+	<script>
+		// 需求：给四个li同时添加红色背景
+
+		/*
+			1. 统一获取四个li
+
+		*/
+		var array = [1,2,3];
+		// 伪/假/类  数组
+		var liList = document.getElementsByClassName('item');
+		
+		for(var i = 0; i < liList.length; ++i) {
+			liList[i].style.fontSize = '30px';
+			liList[i].style.color = 'red';
+		}
+
+		
+
+
+
+
+
+	</script>
+</body>	
+</html>

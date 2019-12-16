@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/*
+			一次考试中，大锤数学得了90分，现在根据得分评出在哪个等级
+			
+			90 - 100  优秀 
+			80 - 89   良好
+			70 - 79   一般
+			60 - 69   及格 
+			60以下    不及格
+
+			用js程序实现
+
+			思路： 
+				由于现在有5种可能性，有5种等级可供匹配，具体属于哪一档，需要用实际的得分 与 对应的区间 匹配 ，匹配的规则：
+
+				90 <= 得分  && 得分 <= 100  优秀 
+
+				80 <= 得分  && 得分 <= 89   良好
+
+		先用单分支实现：
+			单独的if结构 
+		*/
+		// 成绩 
+		var score = 107;
+
+		// 单分支可以做双分支、多分支的事，但是效率相对低下，效率低下原因在于每个单分支事相互独立的，各自做各自的事，每个if需要检测
+		/*if(score >= 90 && score <= 100) {
+			console.log("very good");
+		}
+		if(score >= 80 && score <= 89) {
+			console.log("good");
+		}
+		if(score >= 70 && score <= 79) {
+			console.log("normal");
+		}
+		if(score >= 60 && score <= 69) {
+			console.log("pass");
+		}
+		if(score <= 59) {
+			console.log("fail");
+		}*/
+
+
+
+		// 多分支实现：
+		if(score >= 90 && score <= 100) {
+			console.log("优秀");
+		}else if(score >= 80 && score <= 89) {
+			console.log("良好");
+		}else if(score >= 70 && score <= 79) {
+			console.log("一般");
+		}else if(score >= 60 && score <= 69) {
+			console.log("及格");
+		}else if(score <= 59){
+			console.log("不及格");
+		}else {
+			console.log("输入有误");
+		}
+
+
+
+
+		// if(90 <= score <= 100) {  数学写法，程序不能这么写 
+		// 	console.log(1);
+		// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

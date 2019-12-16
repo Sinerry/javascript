@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// 自定义一个四位数整数，求出各位上数字的和
+		/*
+		var num = 1001;
+		// 千位
+		var thousand = parseInt(num / 1000);
+		// 百位
+		var hundred = parseInt(num % 1000 / 100);
+		// 十位 
+		var decade = parseInt(num % 100 / 10);
+		// 个位
+		var unit = num % 10;
+		console.log(thousand + hundred + decade + unit);
+		*/
+		/*
+		// 个位 
+		var unit = num % 10;
+		// 十位 
+		var decade = (num % 100 - unit)/10;
+		// 百位
+		var hundred = (num % 1000 - decade * 10 - unit)/ 100;
+
+		// hundred = (num % 1000 - num % 100)/100;// = (321 - 21)/100 = 300/100 = 3;
+		// 千位 
+		var thousand = (num -  hundred * 100 - decade * 10 - unit)/1000;
+		// 求和
+		var sum = unit + decade + hundred + thousand;
+
+		// 打印
+		console.log("num各位上的和为: " + sum);
+		*/
+
+
+		/*
+			对于下面两个字符串，比较大小，并写出比较的过程
+			var s1 = "david";
+			var s2 = "daddd12";
+
+			字符串比较大小的原理： 根据每个字符串的ascii(unicode)码
+
+
+			查表：    
+				字符   			ascii码值
+				'0' - '9'  		48 - 57   
+
+				'a'-'z' 		97 - 122  
+
+				'A'-'Z'  		65 - 90
+		*/
+
+		/*var s1 = "david";
+		var s2 = "daddd12";
+
+		// 经过查表的值，v的ascii是118 d： d：100 
+
+		// console.log(s1 > s2);// true 
+
+		// 转义符号
+		var mytext = "Here is \n some text";
+
+		console.log(mytext);
+
+
+		var text = "sdfsdfg'fd'g";
+
+*/
+
+				
+
+		var c = 2
+		c *= 3 + 1 && 4 == 3;
+		console.log(c);
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

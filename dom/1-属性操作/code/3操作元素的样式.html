@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.box {
+			width: 300px;
+			height: 150px;
+			background: green;
+		}
+		.goudan {
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		我是box
+	</div>
+	<script>
+		// 如何给box 添加红色背景 
+
+		/*
+			通过css的学习，我们知道样式是通过css控制，有如下几种方法：
+				
+			1. 行内样式
+
+
+			2. 内部样式表  
+
+
+			3. 外部样式表
+
+
+
+
+
+
+		*/
+
+		// 1. 获取你要操作的元素
+
+		var oDiv = document.getElementById('box');
+
+		// console.dir(oDiv);
+
+		// 2. 操作行内样式   元素.style.属性名 = 值;
+		// oDiv.style.background = 'green';
+		// oDiv.style['background-color'] = 'purple';
+		// oDiv.style.width = '200px';
+		// oDiv.style.height = '100px';
+		// oDiv.style.backgroundColor = 'blue';
+
+
+
+		// 2. 内部样式 
+		oDiv.className = 'box goudan';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		div {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		// var array = [-1,-2,1,10,4,5,8];
+		// console.log(
+		// 	array.sort(function(a,b) {
+		// 	return b - a;
+		// })[0]);
+
+		// var s = "      miao  v        ";
+		/*
+			1. 从前往后找到最后一个不是空格的 m
+
+			2. 从后往前找到最后一个不是空格的 v
+
+			3. 截取（提取）
+		*/ 
+
+
+		// function trim(s) {
+		// 	var startInndex = -1;
+		// 	var endInndex = -1;
+		// 	for(var i = 0; i < s.length; i++) {
+		// 		if(s.charAt(i) !== ' ') {
+		// 			startInndex = i;
+		// 			break;
+		// 		}
+		// 	}
+		// 	for(i = s.length - 1;  i >= 0; --i) {
+		// 		if(s.charAt(i) !== ' ') {
+		// 			endInndex = i;
+		// 			break;
+		// 		}
+		// 	}
+		// 	return s.slice(startInndex,endInndex + 1);
+
+		// }
+
+		// console.log(trim("   hel lo   "));
+
+
+		// "abcabcabcabcabcabda" 中 "ab"  
+		// 6  0/3/6/9/12/15
+
+		var s = "abcabcabcabcabcabda";
+
+		function getCountAndIndexFromString(s) {
+			var num = 0;
+			var indexs = [];
+			for(var i = 0; i < s.length; i++) {
+				if(s.charAt(i) + s.charAt(i+1) === 'ab') {
+					num++;
+					indexs.push(i);
+				}
+			}		
+			return {
+				count: num,
+				indexs: indexs
+			}
+		}
+		console.log(getCountAndIndexFromString("abcabcabcabcabcabda"));
+
+
+	
+		// 第一个  红
+		// 第二个  黄
+		// 第三个  蓝
+		// 第四个  绿
+		
+		// 第五个  红
+		// 第六个  黄
+		// 第七个  蓝
+		// 第八个  绿
+
+		var colors = ["#f00","#ff0","#00f",'#0f0'];
+		var i = 0;
+		for(var j = 1; j <= 100; j++) {
+			document.write("<div style='background:"+colors[i]+"'>"+j+"</div>");
+			if(j % 10 === 0) {
+				document.write("<br/>");
+			}
+			i++;
+			if(i === 4) {
+				i = 0;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

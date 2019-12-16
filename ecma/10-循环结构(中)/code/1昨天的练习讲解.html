@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// 编写程序，求1+3+5+7+...+295+297+299的和。
+		// var i = 1;
+		// var add = 0;
+		// while(i <= 299) {
+		// 	add += i;
+		// 	i += 2;
+		// }
+
+		/*var i = 1;
+		var add = 0;
+		while(i <= 299) {
+
+			// 判断当i是奇数，在进行相加 
+			if(i % 2 !== 0) {
+				add += i;
+			}
+
+			i++;
+		}*/
+
+		// 299 + 297 + 295 + ... + 5 + 3 + 1 = ? 
+
+		// var i = 299;
+		// var add = 0;
+		// while(i >= 1) {
+		// 	add += i;
+		// 	i -= 2;
+		// }
+
+		/*
+
+			第一次循环：
+				add = add + i
+				      0 + 299 = 299
+
+				i = i -2 = 299 - 2 = 297
+			第二次：
+				add = add + i = 299 + 297 = 596
+				i = 295
+
+			第三次：
+				add = add + i = 299 + 297 + 295
+				
+				i = 293
+
+
+		*/
+
+
+
+
+		// 0 + 1 + 2 + 3 + ... + 10 = ?
+		/*
+			sum = 0;
+
+			思路： 
+				sum = sum + i 
+
+				sum = sum + i
+
+				sum = sum + i
+
+				sum = sum + i;
+
+				...
+
+				sum = sum + i
+
+
+
+
+
+
+		*/
+
+		// var i = 1;
+		// var sum = 0;
+
+		// while( i <= 10) {
+		// 	// sum = sum + i;
+		// 	sum += i;// 当前的i和上一次的sum 相加 赋值给sum 
+		// 	i++;
+		// }
+
+		/*
+			第一次循环： 
+				sum = sum + i;
+				sum = 0 + 1
+
+				i = 2
+			第二次循环： 
+				sum = 0 + 1 + 2;
+
+				i = 3
+			第三次循环： 
+				sum = sum + i
+
+				sum = 0 + 1 + 2 + 3;
+
+				i = 4
+			第四次循环： 
+				sum = sum + i
+
+				sum = 0 + 1 + 2 + 3 + 4;
+
+				i = 5
+			第五次循环： 
+				sum = sum + i
+
+				sum = 0 + 1 + 2 + 3 + 4 + 5;
+
+				i = 6
+			第六次循环： 
+				sum = sum + i
+
+				sum = 0 + 1 + 2 + 3 + 4 + 5 + 6;
+
+				i = 7
+
+			第七次循环： 
+				sum = sum + i
+
+				sum = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7;
+
+				i = 8
+			第八次循环： 
+				sum = sum + i
+
+				sum = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8;
+
+				i = 9
+			第九次循环： 
+				sum = sum + i
+
+				sum = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9;
+
+				i = 10
+			第十次循环： 
+
+				sum = sum + i
+
+				sum = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
+
+				i = 11
+			第十次循环： 
+				
+				11 <= 10  循环终止
+
+				最终sum = 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
+
+
+
+
+
+				
+
+
+
+
+		*/
+
+		// console.log("sum = " + sum);
+
+
+
+		// 输出所有的水仙花数,水仙花数:各个位数立方和等于这个数的三位数
+
+		/*
+			根据水仙花数的定义，这个是数必须是三位数
+			100 - 999 
+			即就是100 - 999 之间 找出满足条件的数 
+		*/
+
+		/*for(var i = 100; i <= 999; i++) {
+			// 求出i的各位上的数
+			// 个位
+			var unit = i % 10;
+			// 十位
+			// var ten = (i % 100 - unit) / 10;
+			var ten = parseInt(i % 100 / 10);
+			// 百位
+			// var hundred = (i - ten * 10 - unit)/100;
+			var hundred = parseInt(i / 100);
+			// 条件判断 
+			if(unit * unit * unit + ten * ten * ten + hundred * hundred * hundred === i) {
+				console.log(i);
+			}
+		}*/
+
+
+		/*
+
+			篮球弹起的初始高度是100 米,之后弹起的
+ 			高度都是上一次的0.6倍,问第几次高度小于1米?
+
+
+
+ 			*/
+
+ 			// 循环变量初始化 
+ 			// var height = 100;
+ 			// // 记录弹起的次数 
+ 			// var count = 0;// 
+
+ 			// // 循环条件 
+ 			// while(height >= 1) {
+ 			// 	count++;
+ 			// 	height = height * 0.6;// 循环的变量 
+ 			// }
+ 			// console.log("第" + count +"次高度小于1米");
+
+ 			/*	
+				第一次：
+					count = 1;
+					height = 60
+				第二次：
+					count = 2
+
+					height = 36
+
+				第三次：
+					count = 3
+					height = 21.6
+
+				第四次：
+					count = 4;
+					height = 12.96
+
+				第五次：
+					count = 5
+					height= 7.776
+
+				第六次：
+					count = 6
+					height = 4.6656
+				第七次：
+					count = 7
+					height = 2.79936
+
+				第八次：
+					count = 8
+					height = 2.79936 * 0.6 = 1.676196
+				第九次:
+					count = 9
+					height = 1.676196 * 0.6 = 1.0077
+
+				第十次：
+					count = 10
+					height = 1.0077 * 0.6 = 0.64
+
+ 			*/
+ 			// var height = 0.0001;
+ 			// var count = 0;
+ 			// while(height <= 8848) {
+ 			// 	height *= 2;
+ 			// 	count++;
+ 			// }
+ 			// console.log(count);
+
+
+ 			/*用户输入一个年份，判断输入年份是否为闰年
+			能被4整除但不能被100整除，或者能被400整除的年份，是闰年
+			，否则是平年*/
+
+
+			var year = Number(prompt("请输入年份："));
+
+			// if(isNaN(year) || year <= 0 || parseInt(year) !== year) {
+			// 	console.log("输入年份不合法");
+			// }else if(year % 4 === 0 && year % 100 !== 0 || year % 400 === 0  ) {
+			// 	console.log("闰年");
+			// }else {
+			// 	console.log("平年");
+			// }
+
+			// 或
+			if(isNaN(year) || year <= 0 || parseInt(year) !== year) {
+				console.log("输入年份不合法");
+			}else {
+				if(year % 4 === 0 && year % 100 !== 0 || year % 400 === 0  ) {
+					console.log("闰年");
+				}else {
+					console.log("平年");
+				}
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

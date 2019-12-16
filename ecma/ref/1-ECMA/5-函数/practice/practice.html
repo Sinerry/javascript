@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/*
+			return 
+
+
+
+			1.定义函数，检测一个数是不是偶数
+			2.定义函数，检测一个数是不是素数
+			3.定义函数，计算任意两整数之间的和
+			4.定义函数，求圆的面积
+			5.定义函数，求出两个数的算术运算结果*/
+
+		/*function fn(num){
+			if(num%2===0){
+				console.log(true)
+			}else{
+				console.log(false)
+			}
+		}
+		fn(3);
+		*/
+		// 1.检测一个数是不是偶数
+		/*function isEven(num) {
+			// if(num % 2 === 0) {
+			// 	return true;
+			// }else {
+			// 	return false;
+			// }
+			return num % 2 === 0 ? true : false;
+		}
+		var result = isEven(5);
+		*/
+
+
+		/*function isPrime(num) {
+			// return num%!=0 ?true:false;
+			var flag = true;
+			for(var i = 2; i <= num - 1; i++) {
+				if(num % i === 0) {
+					flag = false;
+					// 如果代码走到这了，表示num就不是素数了 
+					break;
+				}
+			}
+			// if(flag) {
+			// 	return true;
+			// }else {
+			// 	return false;
+			// }
+			return flag;
+		}
+
+		console.log(isPrime(61));
+		// console.log(result);
+		*/
+		/*
+		function add(iStart,iEnd) {
+			// 如果起始数大于结束数,交换
+			if(iStart > iEnd) {
+				var temp = iStart;
+				iStart = iEnd;
+				iEnd = temp;
+			}
+			var sum = 0;
+			for( var i = iStart; i <= iEnd; i++) {
+				sum += i;
+			}
+			return sum;
+		}
+		// console.log(add(0,5));// 15
+		// console.log(add(0,100));// 5050
+		console.log(add(100,0));
+		*/
+
+		// 4.圆的面积 
+
+		/*var area =  function(r) {
+			return Math.PI * r * r;
+		};
+		*/
+
+
+
+		// 5. 计算器
+		var cal = function(num1,num2,operation) {
+			var result;
+			switch(operation) {
+				case '+':
+						// 加法
+					result = num1 + num2;
+					break;
+				case '-':
+						// 减法
+					result = num1 - num2;
+					break;
+				case '*':
+						// 乘法
+					result = num1 * num2;
+					break;
+				case '/':
+						// 除法
+						if(num2 === 0) {
+							console.log('除数不能为零');
+							return false;
+						}else {
+							result = num1 / num2;
+						}
+					break;
+				case '%':
+					  	// 求余
+						if(num2 === 0) {
+							console.log('除数不能为零');
+							return false;
+						}else {
+							result = num1 % num2;
+						}
+					break;
+			}
+			return result;
+		};
+		console.log(cal(30,3,'+'));// 33
+		console.log(cal(20,2,'-'));// 18 
+		console.log(cal(10,1,'*'));// 10
+		console.log(cal(40,0,'/'));// 10 
+		console.log(cal(50,5,'%'));// 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

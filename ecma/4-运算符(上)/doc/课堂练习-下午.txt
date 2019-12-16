@@ -1,0 +1,53 @@
+课堂练习：
+1. var x = 4;
+   var y = 3;
+   var z = x > y && x === y;
+   alert(z);
+   z = x > y || x !== y;
+   alert(z);
+   var z = !(x > y);
+   alert(z);
+   z = x % y || x < y && x > y;
+   alert(z);
+   z = x % y || x;
+   alert(z);
+   z = x % y && y;
+   alert(z);
+   z = x % y || x++;
+   alert(z);
+   alert(x);
+   z = x % y && --y;
+   alert(z);
+   alert(y);
+
+2.var a = 123; 
+  var b = 234;
+  交换a和b的值，
+  用程序实现
+
+3.var x = 1;
+	var y = true;
+	var z = x++;
+	alert(z);
+	z = ++x;
+	alert(z);
+	z--;
+	alert(z);
+	z = y - x;
+	alert(z);
+	z = y++;
+	alert(z);
+	z = ++x - y;
+	alert(z);
+	z = x++ - y++;
+	alert(z);
+	alert(x);
+	alert(y);
+	z = x % y;
+	alert(z);
+	z *= x;
+	alert(z);
+	--z;
+	alert(z);
+
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// person1对象
+		var person1 = {
+			name: "崔雨峰",
+			age: 18,
+			sex: 'm',
+			code: function() {
+				console.log(this.name + "在敲代码");
+			},
+			play: function() {
+				console.log(this.name + "喜欢打球");
+			}
+		};
+
+		// person2对象
+		var person2 = {
+			name: "崔雨亭",
+			code: function() {
+				console.log("喜欢撸代码");
+			}
+		};
+
+
+
+		// 需求： 想把person1的属性和属性值添加到person2中，若person2存在person1中的属性，就不同添加了 
+
+
+		/*
+
+			思路：
+				把person2中没有person1中属性，才添加进来 
+
+				需要判断person2是否存在person1中对应的属性 
+					如果存在，不添加，否则，添加 
+
+
+
+				从person1中检查person2，
+				需要把person1中的每个属性都取出来（遍历）
+				检测person2是否存在对应的属性
+
+		*/
+		for(var key in person1) {
+			// key 就是每次循环的时候 person1 中对应的属性
+			// 需要看person2中是没有这个key，如何知道存不存在这个key呢
+			if(person2[key] === undefined) {
+				person2[key] = person1[key];
+			}
+		}
+
+
+		console.log(person2);
+
+
+
+
+
+		// 如何知道对象存不存在这个key呢
+		/*
+			通过obj访问这个key对应的属性值，如果值为undefined就不再该属性，否则就存在
+		*/
+
+		/*var obj = {
+			a: 1,
+			b: true
+		};
+
+
+		if(obj.c !== undefined) {
+			alert("存在c属性");
+		}else {
+			alert("不存在c属性")
+		}*/
+
+
+		var person1 = {
+			name: "崔雨峰",
+			age: 18,
+			sex: 'm',
+			code: function() {
+				console.log(this.name + "在敲代码");
+			},
+			play: function() {
+				console.log(this.name + "喜欢打球");
+			}
+		};
+		var person2 = {
+			name: "崔雨亭",
+			code: function() {
+				console.log("喜欢撸代码");
+			}
+		};
+		for(var key in person1) {
+			if(person2[key] === undefined) {
+				person2[key] = person1[key];
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

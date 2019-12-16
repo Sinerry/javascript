@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var x = 3
+		var y = 4;
+		var z = x <= y;
+		alert(z);// true 
+		y--;// y = 3
+		z = x >= y;// true 
+		alert(z);// true
+		y += '';// y = y + '' = 3 + '' = '3'
+		z = x == y;// 3 == '3'; 先做隐式转换，再比较
+		alert(z);// true 
+		z = x != y;// 3 != '3'；先做隐式转换，再比较
+		/*		
+			3 != 3  false
+		*/
+		alert(z);// false
+		y -= 0;// y = y - 0 = '3' - 0;先做隐式转换，再做减法运算   y = 3
+		z = x === y;// true
+		alert(z);// true
+		z = x !== y;
+		alert(z);// false
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+1.定义一个给元素添加class的方法，
+<div id="box" class="box goudan"></div>
+再添加'box wrap wrap'
+<div id="box" class="box goudan wrap" dachui="dachui"></div>
+
+2.定义一个给元素删除class的方法，
+<div id="box" class="box goudan"></div>
+删除'box wrap'
+<div id="box" class="goudan" dachui="dachui"></div>

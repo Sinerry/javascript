@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- <input type="radio" id="ipt">
+	<input type="checkbox" id="ipt"> -->
+	<input type="text" id="ipt" >
+	<script>
+		var oIpt =  document.getElementById("ipt");
+		// 类似onblur，失去焦点触发
+		/*
+			如果想每次输出值，就触发就用键盘事件
+		*/
+		oIpt.onchange = function() {
+			console.log("onchange被触发了");
+		};
+	</script>
+</body>
+</html>

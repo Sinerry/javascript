@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+   <ul>
+       <li>aaaaaa</li>
+       <li>bbbbbb</li>
+       <li>cccccc</li>
+       <li>dddddd</li>
+       <li>eeeeee</li>
+   </ul> 
+   <script>
+       // 鼠标放入任意一个li时 当前这个li变色 离开颜色恢复
+       var lis = document.getElementsByTagName("li");
+       // 循环进行事件绑定
+       for(var i=0; i<lis.length; i++) {
+           lis[i].onmouseover = function() {
+               //alert(lis[i]); undefined
+               //alert(i); 5
+               //lis[i].style.backgroundColor = "#f40"; 当鼠标移入这句话代码才执行 此时i=5 所以报错
+               /*
+                 事件处理函数中的this 代表当前事件源
+               */
+               this.style.backgroundColor = "#f40";
+           }
+           lis[i].onmouseout = function() {
+               //lis[i].style.backgroundColor = "";
+               this.style.backgroundColor = "";
+           }
+       }
+   </script>
+</body>
+</html>

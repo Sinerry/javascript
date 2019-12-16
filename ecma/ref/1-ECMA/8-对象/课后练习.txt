@@ -1,0 +1,69 @@
+课后练习：
+1.定义一个宿舍对象
+	包含位置，门牌号，宿舍成员属性，
+	容纳，居住的方法
+
+
+
+
+
+
+
+
+
+
+
+2.将上述对象中的属性和属性值全部取出
+	
+
+3.来了一名叫狗蛋新生，给宿舍添加新的成员
+	dorm.members.push('狗蛋');
+
+4.大锤毕业了，给宿舍减少新的成员
+	
+
+6.对于如下代码，每次弹窗多少？
+	var a = 2;
+	var b = 0;// -1
+	var obj = {
+		a: 3,
+		b: 1,// 2
+		c: function() {
+			alert(a);// 2
+			alert(this.a);// 3
+			this.b++;// 
+			b--;
+			return a + this.b;// 2 + 2 = 4
+		}
+	}
+	console.log(obj.c());// 4
+	var d = obj.c;
+	d();
+	d();
+
+7.对于如下代码，每次弹窗多少？
+	var a = 2;
+	var b = 0;
+	var obj = {
+		a: 3,
+		b: 1,
+		c: function(a) {
+			alert(a);
+			alert(this.a);
+			b++;
+			var a = 1;
+			this.b--;
+			return this.a + b;
+		}
+	}
+	console.log(obj.c(a));
+	var d = obj.c;
+	d(b);
+	d(b);
+
+
+加油！认真完成作业！多敲多练多问才是捷径！！！
+
+
+
+

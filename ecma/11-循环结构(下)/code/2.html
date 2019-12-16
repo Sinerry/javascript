@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="number" placeholder="请输入会员卡号"  id="card">
+	<input type="button" value="按钮" id="btn">
+
+	<script>
+		/*
+			需求：通过单击按钮  实现 是否返利 
+			1. 如何知道按钮有没有被点击  点击事件 onclick
+			2.
+		*/
+		// document.getElementById("btn")  根据id获取元素 
+
+		// DOM  BOM  
+
+		// 1. 获取按钮元素 相操作谁 先获取谁   根据id获取元素
+		var btn = document.getElementById("btn");
+		var card = document.getElementById('card');
+		// 2. 给btn添加单击事件  
+		btn.onclick = function() {
+			// 3. 获取的number框的值，获取到的值是string类型，需要转换成数字   card.value 就是number框的值
+			// 转换成数字类型 
+			var cardNum = Number(card.value);
+			if(cardNum >= 1000 && cardNum <= 9999) {
+				// 个位
+				var unit = cardNum % 10;
+				// 十位
+				var ten = parseInt(cardNum % 100 / 10 );
+				// 百位
+				var hundred = parseInt(cardNum % 1000 / 100);
+				// 千位
+				var thousand = parseInt(cardNum / 1000);
+				// 求和 
+				var sum = unit + ten + hundred + thousand;
+				// if(sum > 20) {
+				// 	console.log("返利50");
+				// }else {
+				// 	console.log("不返利")
+				// }
+				// 三目运算 
+				sum > 20 ? console.log("返利50") : console.log("不返利");
+			}else {
+				console.log("输入的数不合法，要求输入一个四位数");
+			}
+			// 单击了，将number框清空 
+			card.value = '';
+		};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

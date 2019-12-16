@@ -1,0 +1,81 @@
+课堂练习:
+分析下列描述中,事件源、事件(名称)、事件处理程序分别是什么？
+
+
+1.唐三藏念紧箍咒
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.打开电灯开关
+
+
+
+
+
+
+3.小刚骑自行车
+
+
+
+4.姜庆山了自己一巴掌
+
+
+
+4.点击按钮 控制div盒子的显示和隐藏 
+
+
+5.对于如下DOM结构:
+	<ul>
+		<li>aaaa</li>
+		<li>bbbb</li>
+		<li>cccc</li>
+		<li>dddd</li>
+		<li>eeee</li>
+	</ul>
+ 	实现：
+		1. 移入哪个li给谁添加红色背景
+		2. 移走红色背景消失
+
+6.	<ul>
+		<li>aaaa</li>
+		<li>bbbb</li>
+		<li>cccc</li>
+		<li>dddd</li>
+		<li>eeee</li>
+	</ul>
+	实现：
+		1  li隔行变色
+		2. 移入哪个li给谁添加红色背景
+		3. 移走恢复移入之前的背景
+
+7.  <select id="sel">
+        <option>请选择字颜色</option>
+        <option value="red">红色</option>
+        <option value="blue">蓝色</option>
+        <option value="pink">粉红色</option>
+    </select>
+    <p>2019年达到人生巅峰</p>
+
+    p标签的字体颜色与下拉列表一致
+
+
+
+
+
+
+
+
+
+
+

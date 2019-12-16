@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>	
+	<script>
+		var x = 1;
+		var y = 2;
+		var z = 1 && 2;//  1 &&  2 = 
+		alert(z);// 2 
+		z = z || false;// 2 || false 
+		alert(z);// 2
+		z = !z;// 
+		alert(z);// false 
+		z = !x || y;// !1 || y = !true || 2 = false || 2 = 2 
+		alert(z);// 2
+		x--;// x = 0
+		z = !x - y;// !0 - 2 = !false - 2 = true - 2= 1 - 2 =-1
+		alert(z);// -1
+		z = y + !y - x;// 2 + !2 - 0 = 2 + !true - 0 = 2 + false - 0 = 2 + 0 - 0 = 2
+		alert(z);// 2
+		z = x && y || x;// 0 && 2 || 0 = 0 || 0 = 0
+		alert(z);// 0
+	</script>
+</body>
+</html>

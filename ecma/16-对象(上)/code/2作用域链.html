@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/*
+			全局：直接定义在script下的变量和函数称之为全局变量和全局函数 
+			局部：定义在函数中的变量和函数称之为局部变量和局部函数
+
+			作用域链：当一个函数在使用（访问）某个变量的时候，首先从自身内部找起，
+				1.如果找到了，就用自己的，就不再往上找了
+				2.如果找不到，就去父亲（上一级作用域，比自身大的那个作用）那找，
+					1. 如果找到了，拿来就用
+					2. 如果找不到，再往上找，一直到全局作用域，如果有，拿来就用，否则就报错
+
+			作用域：
+				ECMAScript5，简称ES5，
+				在ES5中，只有两种作用域：
+				全局（script）作用域：
+				局部（函数）作用域：
+				if，for，while不存在作用域的 
+
+		*/
+		// function fn() {
+		// 	alert(x);// x is not defined，代码一旦出错，后续代码不再执行 
+		// 	function m() {
+		// 		alert(x);// 没有机会报错  
+		// 	}
+		// 	m();
+		// }
+		// fn();
+		if(false) {
+			var x = 1;
+		}
+		alert(x);// undefined 
+
+
+
+		// var x;
+		// if(false) {
+		// 	x = 1;
+		// }
+		// alert(x);// undefined
+
+
+		for(var i = 0; i > 10; i++) {
+			var m = 9;
+		}
+		console.log(m);// undfined
+
+		// var m;
+		// for(var i = 0; i > 10; i++) {
+		// 	m = 9;
+		// }
+		// console.log(m);// undfined
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

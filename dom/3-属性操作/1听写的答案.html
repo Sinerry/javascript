@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="text" id="account" autocomplete="off">
+	<span id="msg"></span>
+	<br/>
+	<input type="button" value="按钮" id="btn">
+	<script>
+		// 1. 选元素 
+		var oAccount = document.getElementById('account'),
+			oMsg = document.getElementById('msg'),
+			oBtn = document.getElementById('btn');
+
+		// 2. 给按钮添加单击事件
+		oBtn.onclick = function() {
+			// 2.1 获取帐号并去掉首尾空格
+			var account =  oAccount.value.trim();
+			// 2.2 检测账号的合法性 
+
+			// 2.2.1 非空校验
+			if(!account) {
+				oMsg.style.color = '#f00';
+				oMsg.innerText = '账号不能为空';
+			// 2.2.2 长度校验 
+			}else if( account.length < 6 || account.length > 15) {
+				oMsg.style.color = '#f00';
+				oMsg.innerText = '账号长度必须是6-15位';
+			// 2.2.2 开头是不是数字的校验
+			}else if(account.charAt(0) >= '0' && account.charAt(0) <= '9') {
+				oMsg.style.color = '#f00';
+				oMsg.innerText = '不能以数字开头';
+			}else {
+				// 取出account中每个字符，一 一 校验
+				var flag = true;
+				for(var i = 0; i < account.length; i++) {
+					var c = account.charAt(i);
+					if(!(c >= '0' && c <= '9' || c >='A' && c <= 'Z' || c >= 'a' && c <= 'z' || c === '_')) {
+						flag = false;
+						break;
+					}
+				}
+				if(flag) {	
+					// 合法
+					oMsg.style.color = '#0f0';
+					oMsg.innerText = '账号正确';
+				}else {
+					// 不合法
+					oMsg.style.color = '#f00';
+					oMsg.innerText = '账号只能由字母、数字、下划线组成';
+				}
+			}
+		};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+课堂练习:
+下面代码执行每次弹出的结果是什么?
+1.
+	var a=10;
+	function aaa(){
+	    alert(a);
+	}
+	function bbb(){
+	    var a=20;
+	    aaa();
+	}
+	alert(a);
+	bbb();
+
+2.
+	alert(a);
+	var a=10;
+	function aaa(){
+	    alert(a);// undefined
+	    var a=20;
+	    alert(a);
+	}
+	aaa();
+	alert(a);
+
+3.   var a=10;
+	function aaa(){
+		alert(a);
+	    a=20;
+	    alert(a);
+	}
+	aaa();
+	alert(a);
+4.  var a=10;
+	function aaa(){
+	    bbb();
+	    alert(a);
+	    function bbb(){
+	    	alert(a);
+	        var a=20;   
+	    }  
+	    alert(a);
+	}
+	aaa();
+	alert(a);
+
+
+5. 
+	alert(a);
+	var a=10;
+	function aaa(a){
+	    alert(a);
+	    a = 5;
+	    alert(a);
+	}
+	alert(a);
+	aaa(a);
+	alert(a);
+
+	
+
+
+
+
+
+
+
+
+

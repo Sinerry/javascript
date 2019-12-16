@@ -1,0 +1,81 @@
+1.创建花对象，包含多组属性和方法，用两种不同的方式创建
+名字 颜色  品种 地域  味道 观察 泡茶 表达情感 
+// 字面量法
+var oFlower = {
+	name: "菊花",
+	color: "yellow",
+	type: "黄菊",
+	address: "河北沧州",
+	view: function() {
+
+	},
+	drink: function() {
+
+	},
+	showLove: function() {
+
+	}
+};
+
+var obj = new Object();
+obj.name = '菊花';
+obj.color = 'yellow';
+...
+obj.drink = function() {
+	
+};
+obj.showLove = function() {
+	
+};
+
+
+2.取出所有属性和值
+for(var key in oFlower) {
+	console.log(key,oFlower[key])
+}
+3.修改一个属性
+	oFlower.type = '胎菊';
+4.删除一个属性
+	delete oFlower.color;
+5.新增一个属性和方法
+	oFlower.taste = '淡淡的';
+
+	// 药材
+	oFlower.medicinal  = function() {
+
+	};
+
+
+
+
+
+
+
+
+
+6.分析如下代码，每次弹窗多少？
+	var obj = {
+		x: 0,
+		z: function() {
+			x++;
+			y = 3;
+			alert(this.x);// 0
+			return y + this.x; // 3 + 0 = 3
+		},
+		y: 2
+	};
+	var x = 3;
+	var y = 3;
+	alert(obj.z());
+	var d = obj.z;// 3
+	alert(window.d());// 6
+	
+
+
+
+
+
+
+
+
+

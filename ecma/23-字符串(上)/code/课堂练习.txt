@@ -1,0 +1,44 @@
+课堂练习：
+1. 
+统计字符串"2nB-d3&*24dAsv_+"中，
+数字、字母、特殊字符各出现的次数
+2.编写reverse函数，可以将一个字符串反转,'hello'=> 'olleh'
+3.编写函数removeNum,满足
+	removeNum('a23b434c45');  // 输出 'abc'
+	removeNum('343abd8c');  // 输出 'abdc'
+4.编写函数toCamel，满足
+	toCamel('font-size');// 输出'fontSize'
+	toCamel('border-left-color');// 输出'borderLeftColor'
+
+5.编写函数isPalindromic，
+	检测一个字符串是否是回文，
+	回文定义：一个字符串反转前后一样
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

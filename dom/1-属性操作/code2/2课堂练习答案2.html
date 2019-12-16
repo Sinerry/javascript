@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			border: 5px solid;
+		}
+		.red {
+			background: red;
+		}
+		.blue {
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="切换背景色" id="btn">
+	<div id="box">
+		
+	</div>
+	<script>
+		// 1. 获取要操作的元素
+		var oBtn = document.getElementById("btn"),
+			oBox = document.getElementById("box"),
+			num = 0;
+		// 2. 给按钮添加单击事件 
+
+		oBtn.onclick = function() {
+			// if(++num % 2) {
+			// 	oBox.style.backgroundColor = 'red';
+			// }else {
+			// 	oBox.style.backgroundColor = 'green';
+			// }
+
+			// oBox.style.backgroundColor = ++num % 2 ? 'red' : 'green';
+			
+			oBox.className = ++num % 2 ? 'red' : 'blue';
+
+			// div的背景色在红、绿之间切换 
+			/*
+				如果div的背景色是绿色，点击按钮了变红，
+				如果div的背景色是红色，点击按钮了变绿
+			*/
+			// console.log(oBox.style.backgroundColor);// ''
+			// if(oBox.style.backgroundColor === 'red') {
+			// 	oBox.style.backgroundColor = 'green';
+			// }else {
+			// 	oBox.style.backgroundColor = 'red';
+			// }
+
+			// console.log(oBox.style.backgroundColor);// ''
+			// if(oBox.style.backgroundColor === '#f00') {
+			// 	oBox.style.backgroundColor = '#0f0';
+			// }else {
+			// 	oBox.style.backgroundColor = '#f00';
+			// }
+			// console.log(oBox.style.backgroundColor);// ''
+			// if(oBox.style.backgroundColor === 'rgb(255, 0, 0)') {
+			// 	oBox.style.backgroundColor = 'rgb(0,255,0)';
+			// }else {
+			// 	oBox.style.backgroundColor = 'rgb(255,0,0)';
+			// }
+
+
+
+
+		};
+	
+
+
+		/*
+			第一次：  红
+			第二次：  绿
+			第三次：  红
+			第四次：  绿 
+
+
+			奇数次： 红
+			偶数次： 绿
+		*/
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>	
+</html>

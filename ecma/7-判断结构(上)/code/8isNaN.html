@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// NaN
+		// var a = 345;
+		// var b = isNaN(a);  // false
+		// console.log(b);
+
+
+		var age = Number(prompt("请输入年龄:"));
+		/*
+			输入有误： 
+				1. 年龄不能为负数，不能超过35
+				2. 只能是纯数字字符串
+		*/
+		if(isNaN(age) || age <= 0 || age >= 35) {
+			console.log("输入有误");
+		}else if(age >= 17) {
+			console.log("可以学前端了");
+		}else {
+			console.log("不可以，再等等吧!!!");
+		}
+
+
+
+
+	</script>
+</body>
+</html>

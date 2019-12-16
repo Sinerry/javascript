@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// 抽奖
+		// 生成一个0 - 9之间的随机整数，根据不同的数字奖励不同的物品
+		// 1. 生成一个0 - 9之间的随机整数
+		/*var random = Math.floor(Math.random()  * 10 );
+		alert(random);
+		// 2. 分支
+		switch(random) {
+			case 0:
+					console.log("奖励iphoneX 11");
+				break;
+
+			case 1:
+					console.log("奖励100元优惠券");
+				break;
+			case 2:
+					console.log("奖励一包辣条");
+				break;
+			case 3:
+					console.log("奖励一包软中华烟");
+				break;
+			case 4:
+					console.log("奖励一瓶江小白");
+				break;
+			case 5:
+					console.log("谢谢惠顾");
+				break;
+			case 6:
+					console.log("再抽一次奖");
+				break;
+			case 7:
+					console.log("奖励一个鼠标垫");
+				break;
+			case 8:
+					console.log("奖励一袋洗衣液");
+				break;
+			case 9:
+					console.log("奖励一卷卫生纸");
+				break;
+		}
+		*/
+
+
+		// 数组装着对象的数据格式 
+		var goods = [
+			{
+				name:"AD钙奶",
+				price: 7.5,
+				num: 4
+			},
+			{
+				name:"老干妈",
+				price: 10,
+				num: 2
+			},
+			{
+				name:"辣条",
+				price: 4.5,
+				num: 5
+			},
+			{
+				name:"五花肉",
+				price: 38.8,
+				num: 2.4
+			},
+			{
+				name:"土豆",
+				price: 1.9,
+				num: 4
+			}
+		];
+
+		// 求商品的总件数， 总价
+
+		/*
+			总件数： 数组的长度
+			总价 = 每个商品的单价 * 每个商品的数量 相加的总和  
+
+
+		*/
+
+
+		// 记录商品的件数：
+		// var num =  goods.length;
+		// 累计总价
+		// var total = 0;
+		// 总价，遍历goods数组
+		// for(var i = 0; i < goods.length; i++) {
+		// 	// 单价 * 数量 
+		// 	total += goods[i].price * goods[i].num;
+		// 	// total += goods[i]["price"] * goods[i]["num"];
+		// }
+		// console.log(num,total);
+
+		// for(var i in goods) {
+		// 	total += goods[i].price * goods[i].num;
+		// }
+		// console.log(num,total);
+
+
+
+
+
+
+
+
+		// 从数组中随机删除一项
+		var subjects = ["html","css","javascript","jquery","bootstrap","vue","react","webpack"];
+
+		/*
+
+			思路：
+				1. 删除数组，可以用pop，shift，splice三个方法均可以实现对数组的删除，
+				但是pop，shift二者删除数组中项是固定的，不符合题意的随机删除，所以排除
+				只能选择splice，问题来了，splice删除，splice如何删除的？
+
+				splice(index,deleteCount)
+				由于本题删除的个数就是1个，所以第二个参数确定为1了
+
+				splice(index,1);
+
+
+				问题转成了：如何从数组中取出一个随机下标
+				对于subjects数组来说，最小下标是0，最大是
+				7，如何从0 - 7之间取出一个随机整数
+
+				Math.floor(Math.random() * 8 )
+
+
+
+
+
+		*/
+
+		var index = Math.floor(Math.random() * subjects.length);
+		subjects.splice(index,1);
+		// console.log(subjects);
+
+
+
+
+		// 定一个数组的去重的函数
+		function unique(array) {
+			var norepeat = [array[0]];
+			for(var i = 1; i < array.length; i++) {
+				if(norepeat.indexOf(array[i]) === -1) {
+					norepeat.push(array[i]);
+				}
+			}
+			return norepeat;
+		}
+
+		
+		// var ret = unique(["html","css","javascript","css","html","vue"]);
+
+		// var ret = unique([1,2,3,3,2,1,4,5,4]);
+		// console.log(ret);
+
+
+
+
+		// alert(1 === 1);// true
+
+		// alert([1,2] === [1,2]);// false
+		// alert({name:"goudan"} === {name:"goudan"});// false
+		// alert(null === null);// true
+		// alert(function(){} === function(){});// false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

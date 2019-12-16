@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			position: absolute;
+			top: 40px;
+			left: 30px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+
+	<script>
+		 var maxLeft = document.documentElement.clientWidth - box.clientWidth;
+		 var minLeft = 0;
+		 var maxTop = document.documentElement.clientHeight - box.clientHeight;
+		 var minTop = 0;
+
+		 var startLeft = box.offsetLeft;
+		 var startTop = box.offsetTop;
+		 var stepX = 10;
+		 var stepY = 10;
+		 var x,y;
+		 setInterval(function() {
+		 	x = box.offsetLeft + stepX;
+		 	y = box.offsetTop + stepY;
+		 	if(x >= maxLeft || x <= minLeft) {
+		 		stepX *= -1;
+		 	}
+		 	if(y >= maxTop || y <= minTop) {
+		 		stepY *= -1;
+		 	}
+		 	x = Math.max(minLeft,x)
+		 	x = Math.min(maxLeft,x);
+		 	y = Math.max(minTop,y)
+		 	y = Math.min(maxTop,y);
+		 	box.style.cssText = `left:${x}px;top:${y}px`
+
+		 },1000/60);
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

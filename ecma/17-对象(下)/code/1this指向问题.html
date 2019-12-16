@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+
+		// window.alert()
+		// window.prompt()
+
+		// window.parseInt()
+		// window.parseFloat()
+
+
+		// var x = 1;
+		// // 全局函数 执行的时候，this指向window对象
+		// function fn() {
+		// 	console.log(this === window);// true
+		// 	window.x++;
+		// }
+		// window.fn();
+		// alert(x);
+
+		/*
+			执行过程：
+				window.fn(); 调用fn函数
+					进入fn函数体，执行代码
+
+
+
+
+
+		*/
+
+
+		// 方法在某个对象中 
+
+
+		// var obj = {
+		// 	i: 1,
+		// 	show: function() {
+		// 		// console.log(2);
+		// 		// console.log(this === obj);// true
+		// 		--this.i;
+		// 	}
+		// };
+
+		// // 找全局show函数
+		// obj.show();// show is not defined 
+		// console.log(obj.i);
+
+		var i = 2;
+		var obj = {
+			i: 1,
+			show: function() {this.i++;}
+		};
+		obj.show();// obj对象访问show立即执行 
+		var fn = obj.show;
+		// var fn = function() {
+		// 	this.i++;// this === window
+		// };
+		// 只是把show属性名对应的属性值取出，然后赋值给fn变量
+		var fn = obj.show();
+		fn();
+		// window.fn();
+		// console.log(obj.i);// 2
+		// console.log(i);// 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

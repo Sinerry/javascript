@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			background: #000;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			var oBox = document.getElementById("box");
+			var num = 0;
+
+			// 1.注册事件   注销事件 
+			oBox.onclick = function() {
+				// 2 生成一个随机色
+				num++;
+				var r = Math.floor(Math.random() * 256);
+				var g = Math.floor(Math.random() * 256);
+				var b = Math.floor(Math.random() * 256);
+				// rgb(0-255,0-255,0-255)  #324ad4
+				this.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+
+				if(num === 3) {
+					// 注销事件 
+					this.onclick = null;
+				}
+			};
+
+
+			// 2. 事件绑定   事件解绑
+
+			
+
+
+
+		};
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+	
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

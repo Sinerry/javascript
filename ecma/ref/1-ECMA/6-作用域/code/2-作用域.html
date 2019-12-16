@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var a = 1;// 全局变量a
+		function fn() {// 全局函数fn
+			var a = 2;// 局部变量a
+			function x() {// 局部函数x
+
+			}
+		}
+
+		var fn2 = function() {// 全局函数fn2
+			var a = 3;// 局部变量a
+		};
+	</script>
+</body>
+</html>

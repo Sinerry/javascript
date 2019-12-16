@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/*
+			统计字符串"2nB-d3&*24dAsv_+"中，
+			数字、字母、特殊字符各出现的个数
+
+			思路： 
+				1. 取出字符串中每个字符，对其做检测
+				2. 检测的依据  ascii码 
+
+				'0' - '9'  数字 
+				'a' - 'z'  小写字母
+				'A' - 'Z'  大写字母 
+
+
+		*/
+		var str = "2nB-d3&*24dAsv_+",
+			numCount = 0,
+			letterCount = 0,
+			specialCount = 0;
+		for(var i = 0; i < str.length; i++) {
+			// 数字字符
+			if(str[0] >= '0' && str[i] <= '9') {
+				numCount++;
+			// 字母 （大小写）
+			}else if(str[i] >= 'A' && str[i] <= 'Z' || str[i] >= 'a' && str[i] <= 'z') {
+				letterCount++;
+			// 特殊字符
+			}else {
+				specialCount++;
+			}
+		}
+
+		console.log("该字符串中,数字的个数是:" + numCount+",字母的个数是:" + letterCount + ",特殊字符的个数是:" + specialCount);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="checkbox" name="selAll">全选
+	<input type="checkbox" name="fx">反选<br/>
+	<input type="checkbox" name="item">
+	<input type="checkbox" name="item">
+	<input type="checkbox" name="item">
+	<input type="checkbox" name="item">
+	<input type="checkbox" name="item">
+	<input type="checkbox" name="item">
+	<input type="checkbox" name="item">
+	<script>
+		var selAll = document.getElementsByName('selAll')[0];
+		var fx = document.getElementsByName('fx')[0];
+		var items = document.getElementsByName('item');
+		selAll.onclick = function() {
+			for(var i = 0; i < items.length; i++) {
+				items[i].checked = this.checked;
+			}
+		};
+		fx.onclick = function() {
+			for(var i = 0; i < items.length; i++) {
+				items[i].checked = !items[i].checked
+			}
+			var flag = true;
+			for(var j = 0; j < items.length; j++) {
+				if(!items[j].checked) {
+					flag = false;
+					break;
+				}
+			}
+			if(flag) {
+				selAll.checked = true;
+			}else {
+				selAll.checked = false;
+			}
+		};
+		for(var i = 0; i < items.length; i++) {
+			items[i].onclick = function() {
+				var flag = true;
+				for(var j = 0; j < items.length; j++) {
+					if(!items[j].checked) {
+						flag = false;
+						break;
+					}
+				}
+				if(flag) {
+					selAll.checked = true;
+				}else {
+					selAll.checked = false;
+				}
+			};
+		}
+	</script>
+</body>
+</html>

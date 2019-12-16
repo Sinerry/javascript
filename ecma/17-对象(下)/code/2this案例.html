@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var a = 2;
+		var b = a++;
+		var obj = {
+			a: 3,
+			b: 2,
+			c: function() {
+				alert(a);
+				alert(this.a);
+				this.b++;
+				b--;
+				return a + this.b;
+			}
+		}
+		console.log(5);
+		var d = function() {
+			alert(a);
+			alert(this.a);
+			this.b++;
+			b--;
+			return a + this.b;
+		}
+		d();
+		d();
+
+
+
+	
+	</script>
+</body>
+</html>

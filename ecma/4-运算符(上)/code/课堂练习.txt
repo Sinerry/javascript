@@ -1,0 +1,52 @@
+1.下列代码每次弹窗多少？
+	var x = 3
+	var y = 4;
+	var z = x <= 4;
+	alert(z);
+	y--;
+	z = x >= y;
+	alert(z);
+	z += '';
+	z = x == y;
+	alert(z);
+	z = x != y;
+	alert(z);
+	z -= 0;
+	z = x === y;
+	alert(z);
+	z = x !== y;
+	alert(z);
+
+
+2. 弹窗多少？
+   var x = 1;
+   var y = false;
+   var z = x && y;
+   alert(z);
+   --x;
+   z = x && y;
+   alert(z);
+   z = x && ++y;
+   alert(z);
+   alert(y);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

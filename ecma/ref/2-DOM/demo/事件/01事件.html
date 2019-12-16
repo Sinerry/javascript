@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">快点我</button>
+    <script>
+        // 单击按钮 弹出欢迎你 事件源.事件 = 事件处理结果
+        // 1 事件源  按钮
+        var oBtn = document.getElementById("btn"); // 查找元素  根据id
+        //alert(oBtn);
+        // 2 给事件源绑定注册事件  onclick 单击事件
+        oBtn.onclick = function() {
+            // 事件处理逻辑
+            alert("欢迎你");
+        }  
+
+        // 事件处理函数 是当事件触发后才执行
+
+        /*
+            唐三藏念紧箍咒 
+                唐三藏
+                念
+                孙悟空头疼
+            打开电灯开关
+                开关
+                打开
+                电灯亮了    
+        */
+
+    </script>
+</body>
+</html>

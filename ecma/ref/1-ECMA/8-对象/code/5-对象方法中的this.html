@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// var oBook = {
+		// 	name: '真北',
+		// 	author: '比尔·乔治 彼得·西蒙斯',
+		// 	read: function(a,b) {
+		// 		// console.log(typeof this);// object
+		// 		// console.log(this.author);
+		// 		console.log(this);
+		// 		return a + b;
+		// 	}
+		// };
+		// oBook.read(1,2);
+		// function fn() {
+		// 	console.log(this);
+		// }
+		// fn();
+		// var a = oBook.read;
+		// console.log(a());
+
+		var a = 2;// 全局变量a
+		var b = 3;// 全局变量b
+		var obj = {
+			a: 1,
+			b: 2,
+			fn: function() {
+				return this.a + this.b;
+			}
+		};
+		// console.log(obj.fn());
+		/*
+			obj.fn()   obj对象 调用 fn函数 
+			执行fn的函数体: 
+				return this.a + this.b = ????
+				需要知道this指向谁？
+
+				因为这时候 obj 在调用 函数 fn()
+				所以此时fn函数内部的this指向obj
+				return obj.a + obj.b;
+				 return 1 + 2
+				 return 3
+
+		*/
+		// c是个全局函数
+		var c = function() {
+			// this指向window对象  
+				return this.a + this.b;
+			};
+		console.log(window.c());
+		/*
+			return window.a + window.b 
+				return 2 + 3 
+				return 5
+		*/
+		
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

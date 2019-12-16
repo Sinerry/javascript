@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form id="form">
+		<input type="text" placeholder="手机号/邮箱/账号"><br/>
+		<input type="submit" value="注册">
+	</form>
+	<script>
+		var oForm =  document.getElementById("form");
+		// form的提交事件  只要点击submit按钮就出触发form的submit事件，submit触发了之后默认会刷新页面
+		oForm.onsubmit = function() {
+			alert(1);
+		};
+
+
+		
+	</script>
+</body>
+</html>

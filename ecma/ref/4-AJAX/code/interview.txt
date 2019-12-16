@@ -1,0 +1,97 @@
+1.HTML5的新特性有哪些？
+新增语义化标签
+智能表单
+拖拽
+地理定位
+本地存储
+多媒体(音频，视频)
+画布
+AJAX2.0
+离线缓存
+
+2.HTML5的常用语义化标签有哪些？
+header
+section
+footer
+nav
+article
+aside 
+main
+figure
+figurecaption
+progress
+time
+
+3.本地存储如何实现存，取，删，清的操作？
+
+4.localStorage与sessionStorage的区别？
+
+
+5.音频，视频播放中如何实现进度条的跟随？
+
+currentTime /duration * 100 + '%';
+
+
+6.拖拽事件有哪些？当把文件拖拽到目标元素上释放之后，如何获取文件信息？
+
+
+7.触摸事件如何获取手指的信息？
+	targetTouches[0]
+	touches[0]
+			clientX
+			clinetY 
+
+
+8.zepto与jquery有何区别？
+
+
+9.zepto中动画的实现原理是什么？
+
+
+
+10.CSS3的新特性有哪些？
+1. 变换
+2. 动画
+3. 盒子模型
+4. 媒体查询 
+5. 选择器 
+
+
+11.媒体查询是什么？如何实现的？
+	响应式 布局的 
+	原理： 在不同的屏幕尺寸下应用不同的样式
+	@media (max-width:) and (min-width:) {
+
+	}
+
+12.弹性盒子的特性是什么？
+
+13.如何规定主轴的排列方向？
+14.怪异盒子与普通盒子的区别？
+15.CSS3中两种动画的区别？
+transition： 被动，简单
+animation： 主动，复杂
+16.CSS3中的3d变换的属性有哪些？
+17.CSS3新增选择器有哪些？
+
+
+
+
+18.zepto、原生js分别是如何实现事件委托的？
+zepto中是通过on方法的第二个参数实现的
+原生js是通过ev.target属性获取事件源的
+
+19.rem是什么？它布局的原理是什么？
+20.移动端布局为什么要进行视口约束？
+21.ajax的get与post请求的区别？
+22.事件对象是什么？有什么作用？
+
+
+
+
+
+
+
+
+
+

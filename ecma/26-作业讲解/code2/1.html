@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+
+		function removeNum(s) {
+			var s2 = '';
+			// 1. 遍历字符串，取出每一位字符
+			for(var i = 0; i < s.length; ++i) {
+				// if(s[i] >= 'a' && s[i] <= 'z' || s[i] >=  'A' && s[i] <= 'Z') {
+				// 	s2 += s[i];
+				// }
+				if(isNaN(s[i])) {
+					s2 += s[i];
+				}
+
+			}
+			// console.log(s2);
+			// 一定要把结果return出去，不能打印（打印只是做代码调试），才能让调用者拿到这个结果
+			return s2;
+		}
+		var ret = removeNum("dsDf32F_8+(5rjn");
+		// console.log(ret);
+
+	</script>
+	<script>
+		// 定义函数
+		var toCamel = function(s) {
+			// 1.用短线切开 
+			var array = s.split('-');
+			// ["background","color"]
+			// 2.遍历数组
+			for(var i = 1;  i < array.length; i++) {
+				// 'color'  取出首字母变大些，其它不变 
+				array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1)
+			}
+			// 4. join一下并将这个返回出去 
+			return array.join('');
+		};
+
+
+		// 调用函数(函数执行)
+		/*
+			函数调用了会做什么事情：
+			1. 如果函数有形参，先将实参的值赋值给形参，此时形参的值就确定了
+			2. 将确定的形参的值代入函数体，执行函数，直到结束
+			3. 函数执行完毕，回到调用的地方，继续往下执行
+
+		*/
+		console.log(toCamel("background-color"));
+
+		// backgrondColor
+		console.log(toCamel("header-main-content-nav-bar"));// backgrondColor
+
+
+		
+		function isPalindromic(s) {
+			return s === s.split('').reverse().join('');
+		}
+
+
+		console.log(isPalindromic("12321"));
+		console.log(isPalindromic("12323421"));
+		console.log(isPalindromic("上海自来水来自海上"));
+		console.log(isPalindromic("山西悬空寺空悬西山"));
+
+
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/*
+			1. 用户输入两个数，求该两个数的算术运算
+
+			思路： 
+				1. 先接受用户输入的两个数
+				2. 转换
+				3. 算术运算
+
+
+			2. 用户输入数学和英语成绩，求出其中较高的成绩
+				思路： 
+					1. 先接受用户输入的两科目的成绩
+					2. 转换
+					3. 做比较 
+					4. 得出高的
+
+			3. 用户输入年龄，判断ta属于哪个类别
+				0 - 13：儿童
+				14 - 23：青少年
+				24 - 33：青年
+				34 - 43：中年
+				44 - 53：中老年
+				54及其以上：老年
+
+		*/
+
+		// 第一个数 
+		/*var num1 = Number(prompt("请输入第一个数字："));
+		// 第二个数 
+		var num2 = Number(prompt("请输入第二个数字："));
+
+		if(isNaN(num1)) {
+			alert("第一个数不合法");
+		}else if(isNaN(num2)) {
+			alert("第二个数不合法");
+		}else {
+			// 说明两个数合法
+			// 和
+			var add  = num1 + num2;
+			// 差
+			var sub = num1 - num2;
+			// 积
+			var mul = num1 * num2;
+			// 商
+			if(num2 === 0) {
+				alert("除数不能为零");
+			}else {
+				var div = num1 / num2;
+			}
+			// 模
+			var mod = num1 % num2;
+		}*/
+
+		// var math = Number(prompt("请输入数学成绩:"));
+		// var english = Number(prompt("请输入英语成绩:"));
+
+		// if(isNaN(math)) {
+		// 	console.log("数学不合法");
+		// }else if(isNaN(english)) {
+		// 	console.log("英语成绩不合法");
+		// }else {
+		// 	// if(math > english) {
+		// 	// 	console.log("数学成绩高，为" + math + "分");
+		// 	// }else {
+		// 	// 	console.log("英语成绩高，为" + english + "分");
+		// 	// }
+
+		// 	// 三目运算  本质是if-else的变形
+
+		// 	// 得出科目 
+		// 	var major = math > english ? "math" : "english";
+
+		// 	// 三目运算
+
+		// 	// 得出具体的成绩 
+		// 	var max = math > english ? math : english;
+
+		// 	console.log("高分是" + major + ",是" + max + "分");
+		// }
+
+
+
+
+		/*
+
+			 用户输入一个数字，判读其是整数还是小数
+
+			6. 在第5题的基础上，进一步判断是正整数还是负整数，正小数还是负小数
+		*/
+
+
+		// 接收输入 并转换为number类型
+		// var num = Number(prompt("请输入这个数字:"));
+
+		// 验证合法性
+		/*if(isNaN(num)) {
+			console.log("输入不合法，你输入的不是数字");
+		}else {
+
+			// 合法 
+
+			// 依据： 整数与1的模运算，结果为0，小数与1的模运算不为零
+
+
+			// 与1 模运算 ，得到余数
+			var mod = num % 1;
+			if(mod === 0) {
+				console.log("整数");
+				if(num > 0) {
+					console.log("正整数");
+				}else if(num < 0) {
+					console.log("负整数");
+				}
+			}else {
+				console.log("小数");
+				if(num > 0) {
+					console.log("正小数");
+				}else if(num < 0){
+					console.log("负小数");
+				}
+			}
+		}
+		/*
+
+			用户输入一个数字，求出对应的星期，对应关系如下：
+				1  -- 星期一
+				2  -- 星期二
+
+				...
+
+				7  --  星期日
+			*/
+
+			var num = Number(prompt("请输入一个1-7之间的整数："));
+
+			if(isNaN(num) || num >= 8 || num <= 0) {
+				console.log("该数字不合法");
+			}else{
+				if(num > 1 && num < 10) {
+					console.log("星期一");
+				}else if(num === 2) {
+					console.log("星期二");
+				}else if(num === 3) {
+					console.log("星期三");
+				}else if(num === 4) {
+					console.log("星期四");
+				}else if(num === 5) {
+					console.log("星期五");
+				}else if(num === 6) {
+					console.log("星期六");
+				}else if(num === 7) {
+					console.log("星期日");
+				}
+
+				switch(num) {
+					case 1:
+						console.log("星期一");
+						break;
+					case 2: 
+						console.log("星期二");
+						break;
+					case 3: 
+						console.log("星期三");
+						break;
+					case 4:
+						console.log("星期四");
+						break;
+					case 5:
+						console.log("星期五");
+						break;
+					case 6:
+						console.log("星期六");
+						break;
+					case 7:
+						console.log("星期日");
+						break;
+				}
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="box dachui" id='box'>
+		
+	</div>
+	<script>
+		// jQuery 
+
+
+
+
+
+
+		
+
+		function norepeat(array) {
+			for(var i = 0; i < array.length; i++) {
+				for(var j = array.length - 1;  j >= i + 1; j--) {
+					if(array[i] === array[j]) {
+						array.splice(j,1);
+					}
+				}
+			}
+			return array;
+		}
+		var oBox = document.getElementById('box');
+		// addClass(oBox,'goudan box dachui');
+		function addClass(el,className) {
+			// 1.获取添加之前的class
+			var cls = el.className;
+			// 2.空格原来className切割 
+			var array = norepeat(cls.split(' '));
+			// console.log(array);// ['box','dachui']
+			// 3.切割参数的class
+			var newArray = className.split(' ');
+			// console.log(newArray);// ['goudan']
+			// 4.检测 检测array是否存在newArray中元素 如果有就不加了 否则再添加
+			for(var i = 0; i < newArray.length; i++) {
+				if(array.indexOf(newArray[i]) === -1) {
+					array.push(newArray[i]);
+				}
+			}
+			el.className = array.join(' ');
+		}
+		// 自定义给元素删除class的方法
+		/*
+			el: 要删除class元素
+			className: 要删除的类名 
+
+
+		*/
+		// 自定义给元素添加class的方法
+		/*
+			el: 要添加class元素
+			className: 要添加的类名 
+
+		*/
+		function removeClass(el,className) {
+			// 1.获取添加之前的class
+			var cls = el.className;
+			// 2.空格原来className切割 
+			var array = norepeat(cls.split(' '));
+			// console.log(array);// ['box','dachui']
+			// 3.切割参数的class
+			var newArray = className.split(' ');
+			// console.log(newArray);// ['goudan']
+			// 4.检测 检测array是否存在newArray中元素 如果有就删除
+			for(var i = 0; i < newArray.length; i++) {
+				if(array.indexOf(newArray[i]) !== -1)  {
+					array.splice(array.indexOf(newArray[i]),1);
+				}
+			}
+			// 通过空格拼接成字符串 再 设置给元素的className属性 
+			el.className = array.join(' ');
+		}
+		// removeClass(oBox,'box goudan')
+		// 有就删 没有就添加
+		function toggleClass() {
+			
+		}
+		// toggleClass(oBox,'on dachui');
+
+
+		// 判断元素有没有指定的class，返回布尔值 
+		function hasClass(el,className) {
+			var cls = el.className;
+			// 2.空格原来className切割 
+			var array = norepeat(cls.split(' '));
+			// console.log(array);// ['box','dachui']
+			return array.indexOf(className) !== -1;	
+		}
+		console.log(hasClass(oBox,'dachui'));
+
+		
+	</script>
+</body>
+</html>

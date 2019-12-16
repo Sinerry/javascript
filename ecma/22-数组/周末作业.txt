@@ -1,0 +1,129 @@
+周末作业：
+1.用两种方式创建水果对象，汽车对象，并且都包含多组属性与方法
+
+2.实现上述两个对象的增删改查和遍历
+
+3.如下代码执行，每次弹窗多少？
+(1）var x = 1;
+	var obj = {
+		x: 2,
+		y: function() {
+			return this.x++ + x;
+		}
+	};
+	alert(obj.y());
+	alert(obj.x);
+	alert(x);
+	alert(window.x);
+
+(2) var x = 1;
+	var obj = {
+		x: 2,
+		y: function() {
+			return this.x++ + x;
+		}
+	};
+	var y = obj.y();
+	alert(y);
+	y = obj.y;
+	y();
+	alert(x);
+	alert(obj.x);
+	x++;
+	alert(window.x);
+
+(3) var x = 1;
+	var obj = {
+		x: 2,
+		y: function(x) {
+			return this.x++ + x;
+		}
+	};
+	var y = obj.y(x);
+	alert(y);
+	y = obj.y;
+	y(x);
+	alert(x);
+	alert(obj.x);
+	x++;
+	alert(window.x);
+
+
+
+
+4. 求数组[180,176,189,173,170,166]最值、最值的下标、平均值、总和
+
+
+5. 将20-50之间所有的素数存入数组
+
+
+6.编写函数isInArray(n,array) 判断n是否在数组array中
+
+7.编写函数norepeat(array) 将数组的重复元素去掉，用两种方式实现
+
+8.编写函数，得到从min都max之间的 随机整数，包括min包括max
+
+9.给数组[34,21,56,49,14,37]排序，用两种方法实现
+
+
+10.给数组[
+	{name:"苹果",price:5.9},
+	{name:"柚子",price:2.8},
+	{name:"葡萄",price:3.9},
+	{name:"橘子",price:4},
+	{name:"香蕉",price:3.98}
+]，按照价格进行升序排列
+
+11.如何把数组["html","css","javascript","css","vue","html"]
+	转成[["html",2],["css",2],["javascript",1],["vue",1]]
+
+12.找出数组[3,1,4,1,3,2,3,2,6,3,5]中，哪个数字出现的次数最多，出现了几次？
+例如，本数组中数字3出现的最多，出现了4次
+
+13.用程序实现，输出下面几个图形 
+	1 2 3 4 5 
+	1 2 3 4 
+	1 2 3
+	1 2 
+	1
+
+
+
+	1 
+	1 2
+	1 2 3 
+	1 2 3 4 
+	1 2 3 4 5 
+
+
+
+	     *
+	   * *
+	 * * *
+   * * * *
+ * * * * *
+
+
+
+
+   	    * 
+	  * * * 
+    * * * * * 
+  * * * * * * *
+* * * * * * * * *
+
+
+
+
+14. 编写randomColor函数，得到一个随机颜色
+
+
+
+
+
+
+
+
+
+
+

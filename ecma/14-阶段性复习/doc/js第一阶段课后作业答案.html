@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+// 	假设  var t = b = c = d  = 4;
+// 请写出下面表达式的运算符步骤和rs的结果
+// 题目1：rs  =  -c * ((t=t/d-1)*t*t*t - 1) + b;
+// 题目2：rs = -c/2 * ((--t)*(t-2) - 1) + b
+
+	/*
+		rs = -c * ((t=t/d-1)*t*t*t - 1) + b;
+		    = -4 * ((t = 0) * t * t * t -1) + 4
+		    = -4 * (0* t * t * t - 1)+4
+		    = -4 * (0 - 1) + 4
+		    = -4 * -1 + 4
+		    = 8
+	*/
+	// var t = b = c = d  = 4;
+	// var rs = -c * ((t=t/d-1)*t*t*t - 1) + b;
+	// console.log(rs);
+
+	/*
+		rs = -c/2 * ((--t)*(t-2) - 1) + b
+
+		   = -c/2 * (3 * 1 - 1) + b
+		   = -4/2 * 2 + 4
+		   = 0
+
+	*/
+	// var t = b = c = d  = 4;
+	// var rs = -c/2 * ((--t)*(t-2) - 1) + b;
+	// alert(rs);
+
+	var a = 3, 
+		b = 5;
+	var c = a > b - a && !b - a || a ? "true" : "false";
+
+	/*
+		=  a > b - a && !5 - a ||  a ? "true" : "false"
+		= a > b - a && false - a ||  a ? "true" : "false"
+		= a > 2 && -3 ||  a ? "true" : "false"
+		= true  && -3 ||  a ? "true" : "false"
+		=  -3  || a ? "true" : "false"
+		= -3 ?  "true" : "false"
+		= "true"
+
+	*/
+
+	console.log(c);// 
+
+	/*
+		var  m1 = “1.678元”
+		var  m2 = “2.1234元”
+		要求：求出m1与m2的总和，并且保留两位小数。
+	*/
+	var  m1 = "1.678元";
+	var  m2 = "2.1234元";
+
+	m1 = parseFloat(m1);// 1.678
+	m2 = parseFloat(m2);// 2.1234 
+	var total = m1 + m2;
+
+	// toFixed(数字) 用指定的数字  保留小数点后面几位 
+	console.log(total.toFixed(2));
+
+	/*
+		请使用if.else语句和 switch分别实现一次如下题目（5分）
+		考试分数：小于60分不及格，小于80分良好，小于100分优秀，否则输出分数不对。
+
+
+	*/
+
+
+	var score = Number(prompt('请输入成绩:'));
+	score = parseInt(score / 10);  // 0 - 100   1 2 3 4
+	switch(score) {
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			console.log('不及格');
+			break;
+		case 6:
+		case 7:
+			console.log('良好');
+			break;
+		case 8:
+		case 9:
+		case 10:
+			console.log('优秀');
+			break;
+	}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var a=10;
+		function aaa(){
+		    alert(a);
+		}
+		function bbb(){
+		    var a=20;
+		    aaa();
+		}
+		alert(a);
+		bbb();	
+		
+		// 考查知识点：作用域，作用域链
+
+		/*	
+			画JS代码执行机制（顺序）图：
+			1. 先定义
+				var a;
+				function aaa(){
+		    		alert(a);
+				}
+				function bbb(){
+		    		var a=20;
+		    		aaa();
+				}
+
+			2. 再执行 
+				a = 10;
+				alert(a);//10
+				bbb();    	函数执行，会开启一个新的作用域，继续按照上述步骤执行：
+						
+					进入bbb的函数体：
+						1. 先定义
+							var a;
+
+						2. 再执行：
+							a = 20;
+							aaa();
+
+
+									
+
+					
+
+
+
+		*/
+
+
+
+	</script>
+</body>
+</html>

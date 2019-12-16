@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="box">
+		我是box
+	</div>
+	<div id="wrap">
+		wrap
+	</div>
+	<script>
+		var box = document.getElementById('box');
+
+		// console.log(box,typeof box);
+		
+		// dom对象可以添加自定义属性的 
+		box.goudan = "大锤";
+		console.dir(box);  // directory 目录 
+		// 一个dom对象的键值对很多  246对 
+		// delete box.align;// 自带的属性  删不掉 
+		delete box.goudan;// 自定义的  可以删
+		var a = 0;
+		for(var k in box) {
+			//console.log(k,box[k]);
+			a++;
+		}
+		//console.log(a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

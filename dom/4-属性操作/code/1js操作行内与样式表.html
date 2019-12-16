@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			width: 300px;
+			height: 200px;
+			background: red;
+		}
+
+		.on {
+			position: relative;
+			left: 200px;
+			top: 100px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		box
+	</div>
+
+	<script>
+		/* 需求： 
+			通过js方式 给box添加样式：
+
+			样式： 
+				1.字体变白色
+				2.相对定位，向右偏移200px，向下偏移100px
+
+		*/
+
+		var oBox = document.getElementById("box");
+
+		// 行内 
+		oBox.style.color = 'white';// 绘制 1次 
+		oBox.style.position = 'relative';// 绘制 1次 
+		oBox.style.left = '200px';// 绘制 1次 
+		oBox.style.top = '100px';// 绘制 1次 
+
+		// 样式表 
+		oBox.className = 'on';// 绘制 1次   推荐使用 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

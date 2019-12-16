@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		// var arr = [1,2,3,4,5];  
+		/*
+			目的： 求数组的和 
+
+			思路: 
+				数组不能操作整体，
+				需要取出每一个元素进行运算 
+				var result = arr[0] + arr[1] + arr[2] + arr[3]
+				arr[4] = 1 + 2 + 3 + 4 + 5 = 15
+				
+				看到数组 配合 for循环使用  
+
+		*/
+
+		// var add = 0;
+		// for(var i = 0; i < arr.length; i++) {
+		// 	add += arr[i];
+		// }
+		// console.log('数组的和 = ' + add);
+		// 97 98 
+		var subjects = ['html','css','javascript','node'];
+
+		// var subjects = new Array('html','css','javascript','node');
+		/*var subjects = new Array();
+		subjects[0] = 'html';
+		subjects[1] = 'css';
+		subjects[2] = 'javascript';
+		subjects[3] = 'node';
+		console.log(subjects);// ['html']*/
+
+		// subjects[4] = 'react';
+		// console.log(subjects);
+
+		subjects[subjects.length] = 'react';
+		// console.log(subjects);
+		// subjects.push('react');
+
+		// console.log(subjects);
+		// subjects.splice(subjects.length,0,'react');
+		// console.log(subjects);
+
+
+
+		/*
+			如何找出数组中的最大值
+
+			思路: 假设法
+
+
+			假设第一个元素最大
+			然后让这哥们 跟后面的 依次做比较 
+			如果发现后面有比它大的 
+			将当前这个 设置最大的
+			接着让当前这个 最大的 跟后面的 依次做比较 
+			
+			依次类推
+
+			。。。。。
+
+			直到最后  
+
+			得出结果 
+
+
+
+
+		*/
+
+		// 假设的第一个最大或最小
+		var max = subjects[0],
+		    min = subjects[0];
+		for(var i = 1; i < subjects.length; i++) {
+			if(max < subjects[i]) {
+				max = subjects[i]
+			}
+			if(min > subjects[i]) {
+				min = subjects[i];
+			}
+		}
+		console.log('最大的字符串:' + max);
+		console.log('最小的字符串:' + min);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		   var x = 10;
+		   var y = 3;
+		   var z = x > y && x === y;
+		   /*
+				z = 10 > 3 && 10 === 3
+				  = true && false
+				  = false
+
+		   */
+
+
+
+
+
+
+
+		   alert(z);// false
+		   z = x > y && x % y <= y;
+		   /*
+				
+				z = 10 > 3 && 10 % 3 <= 3
+				  = true && 1 <= 3
+				  = true && true
+				  = true
+		   */
+		   alert(z);// true
+		   y %= x;// y = y % x = 3 % 10 = 3
+
+		   z = x % 2 !== 0 && y % x > 0 && y <= x;
+		   /*
+
+			 = 10 % 2 !== 0 && 3 % 10 > 10 && 3 <= 10
+			 = false && 3 % 10 > 10 && 3 <= 10
+
+			 短路现象
+		   */
+		   alert(z);// false
+
+		   z = x >= y && y++;
+
+		   /*
+			 = 10 >= 3 && y++
+			 = true && y++
+			 = y++;
+
+			 y = 4
+		   */ 
+		   alert(z);// 3 
+		   z = x <= y && y++
+		   /*
+			 z = 10 <= 4 && y++
+			   = false && y++
+		   */
+		   alert(z);// false 
+		   alert(y);// 4
+		   z = x <= y && y++ && x++;
+		   /*
+			 z = 10 <= 4 && y++ && x++
+			   = false && y++ && x++
+		   */
+		   alert(z);// false
+		   alert(y);// 4 
+		   alert(x);// 10
+
+
+	</script>
+</body>
+</html>

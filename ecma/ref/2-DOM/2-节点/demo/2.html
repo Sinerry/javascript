@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>全选反选</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+            #box{ 
+                width: 600px;
+                margin: 100px auto;
+            }
+            #box ul li{
+                height: 35px;
+                line-height: 35px;
+                text-indent: 50px;
+                background: url("img/ck.png") no-repeat 10px 7px;
+                margin-bottom: 1px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #box ul li.checked,#box .btn.on{
+                background-image: url("img/cked.jpg");
+            }
+            #box ul li:nth-child(3n){
+                background-color: #ddd;
+            }
+            #box ul li:nth-child(3n-1){
+                background-color: #bbb;
+            }
+            #box ul li:nth-child(3n-2){
+                background-color: #999;
+            }
+            #box .btn{
+                float: left;
+                height: 35px;
+                line-height: 35px;
+                margin-right: 30px;
+                text-indent: 35px;
+                background: url("img/ck.png") no-repeat 10px 7px;
+                margin-bottom: 1px;
+                cursor: pointer;
+            }
+            #box #reverse{
+                background-image: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <ul>
+                <li class="a b g h">空空如也</li>
+                <li>北京北京</li>
+                <li>爱拼才会赢</li>
+                <li>私奔</li>
+                <li>刚好遇见你</li>
+                <li>爱要有你才完美</li>
+                <li>我是认真的</li>
+            </ul>
+            <p id="all" class="btn">全选</p>
+            <p id="reverse" class="btn">反选</p>
+        </div>
+        <script>
+
+            /*
+
+            不兼容IE8-
+            节点.classList    类数组，节点所有类名的集合
+                         .add()   添加类名
+                         .remove()   移除类名
+                         .toggle()   切换类名（有则删，没有则加）
+
+                         .contains()  判断是否包含某个类名
+
+             通过for注册事件时，什么时候我们需要加自定义属性？？
+             ---- 事件函数里面需要用到每个节点对应的序号的时候
+             */
+
+            var oBox = document.getElementById("box"),
+                aLi = oBox.getElementsByTagName("li"),
+                oAll = document.getElementById("all"),
+                oRe = document.getElementById("reverse"),
+                length = aLi.length;
+
+
+            for (var i = 0; i < length; i++) {
+                //aLi[i].goudan = i;
+                aLi[i].onclick = function () {
+                    this.classList.toggle("checked");
+                    //判断所有的li是否全部被选中
+                    var flag = true;
+                    for (var j = 0; j < length; j++) {
+                        if ( !aLi[j].classList.contains("checked") ){
+                            flag = false;
+                            break;
+                        }
+                    }
+
+                    //只需要在这里判断flag的真假，就知道是否全部被选中
+                    /*if ( flag ){
+                        oAll.classList['add']("on");
+                    }else{
+                        oAll.classList['remove']("on");
+                    }*/
+
+                    oAll.classList[flag?"add":"remove"]("on");
+
+                };
+            }
+
+            oAll.onclick = function () {
+                //给所有li加
+                /*if ( this.classList.contains("checked") ){
+                    for (i = 0; i < length; i++) {
+                        aLi[i].classList.remove("checked");
+                    }
+                }else{
+                    for (i = 0; i < length; i++) {
+                        aLi[i].classList.add("checked");
+                    }
+                }*/
+
+                var x = this.classList.contains("on")?"remove":"add";
+
+                for (i = 0; i < length; i++) {
+                    aLi[i].classList[x]("checked");
+                }
+
+
+                //给自己加
+                this.classList.toggle("on");
+            };
+
+
+            oRe.onclick = function () {
+                for (i = 0; i < length; i++) {
+                    aLi[i].classList.toggle("checked");
+                }
+                var flag = true;
+                for (var j = 0; j < length; j++) {
+                    if ( !aLi[j].classList.contains("checked") ){
+                        flag = false;
+                        break;
+                    }
+                }
+                oAll.classList[flag?"add":"remove"]("on");
+            };
+
+            /*
+             //this.className += " checked";
+             //this.classList.remove("a","h");//add     remove     toggle
+            */
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

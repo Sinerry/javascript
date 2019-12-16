@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#container {
+			position: relative;
+			width: 326px;
+			height: 580px;
+			margin: 100px auto;
+		}
+		#container ul li {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		#container h3 {
+			position: relative;
+			z-index: 3;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			background: rgba(0,0,0,.7);
+			color: #fff;
+		}
+		#container ul li.active {
+			display: block;
+		}
+
+		#container ol {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+		}
+		#container ol li {
+			width: 40px;
+			height: 40px;
+			border-bottom: 1px solid #fff;
+			line-height: 50px;
+			text-align: center;
+			font-size: 22px;
+			color: #fff;
+			background: #000;
+		}
+		#container ol li.active {
+			background: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h3 id="title">1/4</h3>
+		<ul id="ul">
+			<li class="active"><img src="img/1.jpg"></li>
+			<li><img src="img/2.jpg"></li>
+			<li><img src="img/3.jpg"></li>
+			<li><img src="img/4.jpg"></li>
+		</ul>
+		<ol id="ol">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</div>
+
+
+	<script>
+		/*	
+			整个效果是因为单击了按钮触发3个行为：
+				1. 标题的数字的改变
+					点的是第几个按钮显示第几个数字
+				2. 切换图片
+					点的是第几个按钮显示第几张图片
+				3. 哪个按钮被点击了，哪个背景变红，其它的恢复原来的背景色
+		*/
+
+
+		// 1. 获取按钮
+		var ol = document.getElementById('ol'),
+			tabList = ol.getElementsByTagName('li'),
+			oTitle = document.getElementById('title'),
+			ul = document.getElementById('ul'),
+			imgList = ul.getElementsByTagName('li');
+		// 2.给tabList中的每个元素添加单击事件 
+		for(var i = 0; i < tabList.length; i++) {
+			/*
+				经过检测，事件函数中的i的值都是4，
+				4是for循环结束之后i的值
+				i不能用，
+			*/ 
+			// 添加自定义属性 
+			tabList[i].goudan = i;
+			tabList[i].onclick = function() {
+				// 1. 标题的数字的改变
+				oTitle.innerText = this.goudan + 1 + '/4 '
+				// 2.在当前的按钮、图片添加active样式之前，把其它的active都干掉
+				for(var j = 0; j < tabList.length; j++) {
+					tabList[j].className = '';
+					imgList[j].className = '';
+				}
+				// 3. 给当前的按钮当前active样式
+				this.className = 'active';
+				// 4. 显示当前图片
+				imgList[this.goudan].className = 'active';
+				// 做测试 
+				// alert(1);
+				// console.log(i);// 0 1 2 3 
+			};
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

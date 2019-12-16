@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// 字面量法 
+		var mobile = {
+			brand: "华为",
+			type: "mate pro30",
+			price: 6000,
+			size: 6.4,
+			playGame: function() {
+				console.log(this.brand + "可以玩游戏");
+			},
+			watchMoive: function() {
+
+			}
+		};
+
+
+
+		// console.log(mobile);// 在控制台打印出来的键值对的顺序是按照字母的ascii码的大小升序排列的
+		// 遍历对象的时候属性的顺序与书写的顺序时候一致 
+		// for(var k in mobile) {
+		// 	console.log(k,mobile[k]);
+		// }
+		// mobile.brand = "Vivo";
+
+		// delete mobile["type"];
+
+		// console.log(mobile)
+
+		// mobile.color = "白色";
+
+		// var price = mobile.price;
+
+		// console.log(price);
+
+
+		// console.log(mobile);
+
+
+
+		// new 构造函数  
+
+
+
+		/*var phone = new Object();
+
+		phone["brand"] = "华为";
+		phone["type"] = "mate pro30";
+		phone["price"] = 6000;
+
+		phone["playGame"] = function() {
+
+		};
+
+		phone.watchMoive = function() {
+
+		};
+
+		console.log(phone);
+		*/
+
+
+
+		function printRect(row,col) {
+			row = row || 4;
+			col = col || 7;
+			for(var i = 1; i <= row; i++) {
+				for(var j = 1; j <= col; j++) {
+					document.write('* ');
+				}
+				document.write('<br/>');
+			}
+		}
+		printRect(6,9);// 6 9
+		document.write('<hr/>');
+		printRect(10,20);// 10 20
+		document.write('<hr/>');
+		printRect();// undefined undefined
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+		<li>d</li>
+		<li>e</li>
+		<li>f</li>
+		<li>g</li>
+	</ul>
+	<script>
+		// 1. 找到所有的li
+		var liList = document.getElementsByTagName("li");
+		var color;
+
+		// 2. 循环
+		for(var i = 0; i < liList.length; i++) {
+			liList[i].style.background = i % 2 ? 'skyblue' : 'orange';
+			// 3. 添加鼠标移入移出事件
+			// 进入事件
+			liList[i].onmouseenter = function() {
+				// 记录原先的背景色
+				color = this.style.background;
+				this.style.background = 'black';
+			};
+			// 离开事件 
+			liList[i].onmouseleave = function() {
+				// 设置回去之前的背景色 
+				this.style.background = color;
+			};
+		}
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

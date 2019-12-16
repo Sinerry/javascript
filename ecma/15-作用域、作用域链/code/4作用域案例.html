@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// var a = 10;
+  //       x();
+  //       function x() {
+  //    		alert(b);// undefined
+  //           var b = 20;
+  //           alert( b );
+  //       }
+  //       alert( a );
+
+        /*
+			1. 先定义
+				var a;
+				function x() {
+		     		alert(b);
+		            var b = 20;
+		            alert( b );
+		        }
+			2. 再执行 
+				a = 10;
+				x(); 
+					=====>  开启一个新的作用域
+						1. 先定义
+							var b;
+
+						2. 再执行 
+							alert(b);// undefined
+							b = 20;
+					<=====	alert( b );// 20
+				
+				alert(a);// 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        */
+
+
+        // alert(a);
+        // var a = 10;
+        // alert(a);
+        // function a() {alert(20);}
+        // alert(a);
+        // var a = 30;
+        // alert(a);
+        // function a() {alert(40);}
+        // alert(a);
+        // a();
+
+        /*
+			1. 先定义
+				多个变量重名，以写在最后的为准，
+				多个函数重名，以写在最后的为准，
+				当前变量与函数重复，函数的权重比变量大
+
+				function a() {alert(40);}
+
+
+
+			2. 再执行
+				 alert(a);
+				 a = 10;
+				 alert(a);// 10  
+				 alert(a);// 10
+
+				 a = 30;
+				 alert(a);// 30
+				 alert(a);// 30
+
+				 a();// 报错了   a is not a function 
+
+
+        */
+
+
+        //	a();
+         //    var a = function (){alert(1);};
+         //    a();
+         //    var a = function (){alert(2);};
+         //    a();
+         //    var a = function (){alert(3);};
+         //    a();
+
+            /*
+				1. 先定义：
+					var a;
+				2. 再执行：
+					a();// 报错 a is not a function 
+					代码就不再往下执行了 
+            */
+
+       		// alert(a);
+         //    var a = function (){alert(1);};
+         //    a();
+         //    var a = function (){alert(2);};
+         //    a();
+         //    var a = function (){alert(3);};
+         //    a();
+
+            /*
+				1. 先定义
+					var a;
+				
+				2. 再执行 
+					alert(a);// undefined
+					a = function (){alert(1);};
+					a();// 1
+					a = function (){alert(2);};
+					a();
+					a = function (){alert(3);};
+					a();
+
+
+            */
+
+            // fn();
+            // alert(a);
+            // var a = 0;
+            // alert( a );
+            // function fn() {
+            //     a = 1;
+            // }
+            /*
+
+				1. 先定义
+					var a;
+					 function fn() {
+                		a = 1;
+            		 }
+
+
+				2. 再执行
+					fn();   
+							=====> 
+								1. 先定义
+
+								2. 再执行
+									a = 1;
+							<=====
+					alert(a);// 1
+
+					a = 0;
+
+					alert(a);// 0
+
+
+            */
+
+            x();
+            function x(){
+                var a = 20;
+                y();
+
+            }
+
+            // 函数在哪定义，它的作用域就从哪开始看，不能从其调用的地方看其作用域，否则会出错
+             function y() {
+		         alert(a);
+		     }
+
+             
+
+            
+
+            /*
+				1. 先定义
+					function x(){
+		                var a = 20;
+		                y();
+            		}
+
+					function y() {
+              		  alert(a);
+            		}
+
+				2. 再执行 
+					x();
+							=====> 
+								1. 先定义
+									 var a;
+
+
+								2. 再执行 
+									a = 20;
+									y();  
+								=====> 
+
+
+								1. 先定义
+
+
+								2. 再执行 
+									alert(a);// 20 
+
+
+
+					
+											
+							<=====
+
+
+
+
+
+            */
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

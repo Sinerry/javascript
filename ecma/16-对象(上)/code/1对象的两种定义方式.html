@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+
+		}
+	</style>
+</head>
+<body>
+	<script>
+		/*
+			特征(属性）：
+				姓名：姜庆
+				年龄：18
+				性别：女
+				爱好：男
+				肤色：黑 
+			行为（方法/函数）：
+​				敲代码
+			​	摔跤
+			​	学习
+			*/
+
+		// 声明对象 
+		// 对象：一切个体都是对象，抽象的，具体的，看得见，看不见的
+		// 一个人，一部手机，一场球赛，空气....，万物皆对象 
+
+
+		// 通过一对大（花）括号来声明的
+		/*特征(属性）：
+				姓名：姜庆
+				年龄：18
+				性别：女
+				爱好：男
+				肤色：黑 
+			行为（方法/函数）：
+​				敲代码
+			​	摔跤
+			​	学习
+			*/
+		// 字面量法(平时用的多，写的方便)
+		var obj = {
+			// 键值对 (key-value)
+			name: '姜庆',// 第一组
+			age: 18,// 第二组
+			gender: '男',// 第三组
+			hobby: '女',// 第四组
+			color: '黑色',// 第五组
+			//学习的行为 
+			study: function() {
+				console.log("学习的行为");
+			},
+			// 敲代码的行为 
+			code: function() {
+				console.log("敲代码的行为");
+			}
+		};
+
+		/*
+			冒号前面的叫： 键/key/属性（名）
+			冒号前面的叫： 键/key/属性 
+
+
+		*/
+
+
+		// console.log(typeof obj);// object
+
+
+
+		// new Object() new 构造函数
+
+		// var person = {};
+		
+		//person是空对象 （不常用，写着麻烦）
+
+
+		var person = new Object();
+		// 如何给对象添加属性和方法
+
+		// 通过：对象.属性名 = 值
+
+		// 通过：对象.方法名 = function () {};
+
+		console.log(person);
+
+		person.name = "姜庆";
+		person.age = 18;
+		person.gender = '男';
+		person.hobby = '女';
+		person.color = '黑';
+		person.study = function() {
+
+		};
+		person.code = function() {
+
+		};
+
+
+
+		console.log(person);
+
+
+		
+
+
+
+
+	</script>
+</body>
+</html>

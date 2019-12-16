@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="cxy.jpeg" alt="">
+    <script>
+        // 鼠标放图片上 图片进行更换 onmouseover 
+        var oImg = document.getElementsByTagName("img");// 类数组
+        oImg[0].onmouseover = function() {
+            // 图片进行更换 其实就是改变src
+            //oImg[0].src = "girl.jpeg";
+            this.src = "girl.jpeg"; // 在事件处理函数中 this代表事件源
+        }
+        // 鼠标离开 图片还原
+        oImg[0].onmouseout = function() {
+            // 图片进行更换 其实就是改变src
+            //oImg[0].src = "cxy.jpeg";
+            this.src = "cxy.jpeg";
+        }
+    </script>
+</body>
+</html>

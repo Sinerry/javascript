@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		//var x = 2;
+		// alert(x);// 访问方式  
+		// alert(window.x);
+
+		//function fn() {
+		//	console.log('fn');
+		//}
+		//fn();
+		//window.fn();
+
+		function a() {
+			var b = 1;// 局部变量 
+			console.log(b);
+			c();
+			c();
+			function c() {// 局部函数
+				alert(2);
+			}
+		}
+
+		a();
+		// c();// 报错
+
+
+		// console.log(b);// 报错
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+如下代码，写出弹窗结果
+1.
+	var x = 1;
+	var obj = {
+		x: 2,
+		y: function() {
+			return this.x++ + x;
+		}
+	};
+	alert(obj.y());
+	alert(obj.x);
+	alert(x);
+	alert(window.x);
+
+2.	var x = 1;
+	var obj = {
+		x: 2,
+		y: function() {
+			return this.x++ + x;
+		}
+	};
+	var y = obj.y();
+	alert(y);
+	y = obj.y;
+	y();
+	alert(x);
+	alert(obj.x);
+	x++;
+	alert(window.x);
+
+3. 
+	var x = 1;
+	var obj = {
+		x: 2,
+		y: function(x) {
+			return this.x++ + x;
+		}
+	};
+	var y = obj.y(x);
+	alert(y);
+	y = obj.y;
+	y(x);
+	alert(x);
+	alert(obj.x);
+	x++;
+	alert(window.x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

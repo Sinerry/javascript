@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 窗口加载事件 window.onload 简写onload
+        onload = function () {
+            // 单击按钮 弹出欢迎你 事件源.事件 = 事件处理结果
+            // 1 事件源  按钮
+            var oBtn = document.getElementById("btn"); // 查找元素  根据id
+            //alert(oBtn);
+            // 2 给事件源绑定注册事件  onclick 单击事件
+            oBtn.onclick = function () {
+                // 事件处理逻辑
+                alert("欢迎你");
+            }
+        }
+    </script>
+    <button id="btn">快点我</button>
+
+</body>
+
+</html>

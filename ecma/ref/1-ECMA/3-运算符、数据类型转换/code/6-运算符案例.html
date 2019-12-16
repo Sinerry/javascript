@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var x = 3;
+		var y = 2;
+		var z = x % y;
+		console.log(z);
+		var z = x % y++;
+		var z = x + 'x' + y ;
+		var z = ++y - x;
+		var z = y++ - x;
+		var a = y++;
+		var z = a - x;
+		console.log(z);
+		console.log(y);
+		var b = y++;
+		var z = x - b;
+		console.log(z);
+		console.log(y);
+
+		var a = 2;
+		var b = 3;
+		var c = a++ - b;
+		/*
+			采用数学中等量替换
+			我们可以
+			定义一个变量
+			var d = a++;// d = 2  a = 3
+			var c = a++ - b;
+			可以改写成:
+			var c = d - b;
+			      = 2 - 3 
+			      = -1;
+		*/
+		console.log(c);// -1
+		console.log(a);// 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

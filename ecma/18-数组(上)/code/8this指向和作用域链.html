@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// var x = 1;
+		// var obj = {
+		// 	x: 2,
+		// 	y: function() {
+		// 		return this.x++ + x;
+		// 	}
+		// };
+		// alert(obj.y());// 3
+		/*			
+			2++ + 1
+			= 2 + 1 
+		*/
+		// alert(obj.x);// 3
+		// alert(x);// 1
+		// alert(window.x);// 1
+		// var x = 1;// x= 2
+		// var obj = {
+		// 	x: 2,
+		// 	y: function() {
+		// 		return this.x++ + x;
+		// 	}
+		// };
+		// var y = obj.y();// 3
+		// alert(y);// 3
+		// y = obj.y;
+		// window.y();
+		// alert(x);// 2
+		// alert(obj.x);// 3
+		// x++;
+		// alert(window.x);// 3
+
+
+
+
+
+
+
+		var x = 3;
+		var obj = {
+			x: 2,
+			y: function(x) {
+				return this.x++ + x;
+			}
+		};
+		var y = obj.y(x);
+		/*
+			
+				obj.y(1) 
+
+
+				x = 1
+
+				return this.x++ + x
+				2++ + 1 
+				= 2 + 1
+				= 3
+
+		*/
+
+
+		alert(y);// 3
+		y = function(x) {
+			return this.x++ + x;
+		};
+		window.y(x);
+		/*
+			x = 1;
+
+			return this.x++ + x
+		 	return window.x++ + x
+		 	return 1++ + 1
+		 	return 1 + 1 = 2
+
+		*/
+
+		alert(x);// 2
+		alert(obj.x);// 3
+		x++;// 
+		alert(window.x);
+	</script>
+</body>
+</html>

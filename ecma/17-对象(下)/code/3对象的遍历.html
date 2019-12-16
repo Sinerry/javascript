@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="box">
+		<h3>当前用户信息：</h3>
+	</div>
+	<script>
+		// var obj = {
+		// 	name: "狗蛋",
+		// 	age: 18,
+		// 	sex: "m",
+		// 	height: 170,
+		// 	weight: 120,
+		// 	address: "北京市昌平区"
+		// };
+
+		/*var name = obj.name;
+		var age = obj.age;
+		var sex = obj.sex;
+		document.write('<p>姓名：'+ name +'</p><p>年龄：' + age + '</p><p>性别：'+ sex +'</p>');*/
+
+		var obj = {
+			name: "狗蛋",
+			age: 18,
+			sex: "m",
+			height: 170,
+			weight: 120,
+			address: "北京市昌平区"
+		};
+		// 遍历对象 
+		for(var attr in obj) {
+			// console.log(attr,obj[attr]);
+			document.write('<p>'+attr+': '+ obj[attr]+'</p>');
+		}
+
+		/*
+			for in循环的执行过程：
+
+				1. 对象有几组键值对，循环就会执行多少次
+				2. 
+
+		*/
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+	
+
+
+
+
+
+
+
+
+</body>
+</html>

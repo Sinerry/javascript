@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		/* 手机的特征：
+			   品牌
+			   颜色
+			   尺寸
+			   价格
+			   内存 
+		手机的功能：
+				拍照
+				看电影
+				玩游戏
+				听音乐
+			*/
+		// 字面量法定义对象  键值对形式 key-value形式
+		/*
+			
+			冒号(:)前面叫对象的键(key),也叫属性(名)
+			冒号(:)后面的叫对象的值(value),也叫属性值
+			
+			注意: 
+				对象的键在定义的时候不需要加引号，
+				也可以加引号，并且单双引号均可
+				
+				每个属性对应的属性值的数据类型由 具体的需求决定
+
+
+		*/
+		var oPhone = {
+			// 品牌属性
+			brand: 'Apple',
+			// 颜色属性
+			color: '黑色',
+			// 尺寸属性
+			size: '6.2英寸',
+			// 价格属性
+			price: 8898,
+			// 内存属性
+			memory: '8G',
+			// 拍照方法
+			takePhone: function() {
+				console.log('拍照');
+			},
+			// 玩游戏方法
+			playGame: function() {
+				console.log('打游戏');
+			}
+		};
+		// 属性 就是  对象 的特性(外观) 
+		// 方法 就是  对象 的行为(功能)
+		var oPerson = {
+			name: "付子豪",
+			sex: '女',
+			isMarried: true,
+			hobby: []
+		};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

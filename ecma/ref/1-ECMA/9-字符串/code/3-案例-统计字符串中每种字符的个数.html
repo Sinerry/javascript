@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// 统计一个字符串中某种字符出现的个数  大写字母  小写字母   数字  其它字符  
+
+		var str = 'dsfs1SDF423u09Asdn+-1@$JDGHI';
+		/*
+			思路: 
+				通过查ASCII表得知
+				字符  			 	ASCII值
+				'0' - '9'           48 - 57
+				'A' - 'Z'           65 - 90
+				'a' - 'z'           97 - 122
+  				
+  				需要将str中每个字符取出 跟上面的ASCII值做对比 
+  				如果48 - 57  	数字
+  				如果65 - 90      大写字母
+  				如果 97 - 122    小写字母
+  				否则  			其它字符 
+
+
+
+		*/
+		var num = 0,
+			upper = 0,
+			lower = 0,
+			other = 0;
+		for(var i = 0; i < str.length; i++) {
+			if(str[i] >= '0' && str[i] <= '9') {
+				// 数字
+				num++;
+			}else if(str[i] >= 'A' && str[i] <= 'Z') {
+				// 大写字母
+				upper++;
+			}else if(str[i] >= 'a' && str[i] <= 'z') {
+				// 小写字母
+				lower++;
+			}else {
+				other++;
+			}
+		}
+		// num = 7,upper = 9,lower = 8,other = 4
+		console.log('数字: ' + num +'个,大写字母:'+upper+'个,小写字母:' + lower+
+			'个,其它字符:' + other+'个');
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

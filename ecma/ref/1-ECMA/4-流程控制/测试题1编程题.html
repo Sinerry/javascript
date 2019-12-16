@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// 接受用户的输入, 强制转换成数字
+		/*var iAge = parseInt(prompt('请输入你的年龄:'));
+		// 根据iAge 做条件判断 
+		if(iAge < 14) {
+			console.log('你是儿童');
+		}else if(iAge >= 14 && iAge < 24){
+			console.log('你是青少年');
+		}else if(iAge > 24 && iAge < 40) {
+			console.log('你是青年');
+		}else if(iAge >= 40 && iAge < 60) {
+			console.log('你是中年');
+		}else if(iAge >= 60) {
+			console.log('你是老年');
+		}else {
+			console.log('输入有误');
+		}*/
+
+
+		a:for(var i = 0; i < 4; i++) {
+			for(var j = 0; j < 3; j++) {
+				console.log(j);
+				if(j === 1) {
+					break a;
+				}
+			}
+			
+
+		}
+
+
+
+		/*
+			
+			1   
+			1 2
+			1 2 3
+			1 2 3 4
+
+			4行  外循环4次 
+
+			第1行   1列 
+			第2行   2列 
+			第3行   3列 
+			第4行   4列 
+		*/
+
+		// for(var i = 1; i <= 4; i++) {// 外循环控制 行数 
+		// 	for(var j = 1; j <= i; j++) {// 内循环控制 列数
+		// 		document.write(j+' ');// 输出列
+		// 	}
+		// 	document.write('<br/>');// 每行输出完毕换行
+		// }
+
+
+
+
+		// for(var i = 100; i < 1000; i++) {
+		// 	if(i % 4 === 2 && i % 7 === 3 && i % 9 === 5) {
+		// 		document.write(i+' ');
+		// 	}
+		// }
+
+		var count = 0; // 记录找到满足条件的个数 默认值0
+		for(var i = 1; i <= 1000; i++) {
+			if(i % 3 === 0 && i % 5 === 0 && i % 7 === 0) {
+				count++;// 每找到一个满足条件的+1
+				document.write(i+' ');
+				if(count === 6) {// 如果已经找够6个了,换行
+					document.write('<br/>');
+					// count = 0;// 将count重置为0,下一行从零开始计数
+					count %= 6;
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// var x = 1;
+		// function a() {
+		// 	// var x = 2;
+		// 	alert(x);// 2
+		// }
+		// a();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/*
+			作用域:  变量或函数起作用的范围 
+
+			作用域链:  
+				变量用谁的
+		
+
+			return :
+				1. 返回值
+				2. 结束函数
+
+			数组求最值 
+
+			function extremeValue(arr) {
+
+				var max = arr[arr.length - 1];// 
+				假设最后一项最大
+				var min = arr[arr.length - 1];
+				// var max = arr[0];// 假设第一项最大
+				for(var i = 0; i < arr.length - 1;i++) {
+					if(max < arr[i]) {
+						max = arr[i];
+					}
+					if(min > arr[i]) {
+						min = arr[i];
+					}
+				}
+				return [max,min];
+
+			}
+
+				1.假设一个最大
+				2.让假设这哥们 跟数组后面的每一项做比较
+				3.如果发现假设的这个值 比后面要小 
+				  将当前的这一项设置临时最大的
+
+				  然后再让临时最大的数组后面的每一项做比较
+				  重复上面的操作 
+
+
+				  直到循环结束 
+
+
+				  最大的就找到了 
+
+
+
+
+
+
+
+
+			*/
+			/*
+			function extremeValue(arr) {
+				if(!arr.length) {
+					return null;
+				}
+				var max = arr[arr.length - 1];
+				// 假设最后一项最大
+				var min = arr[arr.length - 1];
+				// var max = arr[0];// 假设第一项最大
+				for(var i = 0; i < arr.length - 1;i++) {
+					if(max < arr[i]) {
+						max = arr[i];
+					}
+					if(min > arr[i]) {
+						min = arr[i];
+					}
+				}
+				//return [max,min];
+				// 因为这个函数需要返回多个值，可以返回数组或对象，由于返回数组的话，信息不直观，建议返回对象，一看到结果信息明确，可读性强
+				return {
+					max:max,
+					min:min
+				};
+			}
+			*/
+			
+
+			// console.log(extremeValue([12,8]));//[89,12]
+
+
+			// 去重
+
+			
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

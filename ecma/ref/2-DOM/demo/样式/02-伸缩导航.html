@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>狗子朋友圈</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul{list-style: none;}
+			.group-list {
+				width:260px;
+				margin: 50px auto;
+				border:1px dashed #f60;
+			}
+			.group-list .title {
+				height:36px;
+				line-height: 36px;
+				text-align: center;
+				background: #0a0;
+				color:#fff;
+				font-size: 18px;
+			}
+			.group-list  .group-item h3 {
+				height: 40px;
+				border-bottom:1px solid #fff;
+				line-height: 40px;
+				text-indent:10px;
+				background: #000;
+				color:#fff;
+				cursor: pointer;
+			}
+			.group-list  .group-item h3.active {
+				background: #f60;
+			}
+			.group-list  .group-item  ul {
+				display: none;
+			}
+			.group-list  .group-item  ul.active {
+				display:block;
+			}
+			.group-list  .group-item  ul li {
+				height:30px;
+				line-height: 30px;
+				border-bottom:1px solid #fff;
+				text-indent: 15px;
+				background: #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="group-list">
+			<h2 class="title">我的朋友圈</h2>
+			<div class="group-item">
+				<h3>亲人</h3>
+				<ul>
+					<li>爸爸</li>
+					<li>妈妈</li>
+					<li>姐姐</li>
+					<li>弟弟</li>
+				</ul>
+			</div>
+			<div class="group-item">
+				<h3>同学</h3>
+				<ul>
+					<li>陈强</li>
+					<li>刘晓霞</li>
+					<li>李静</li>
+				</ul>
+			</div>
+			<div class="group-item">
+				<h3>朋友</h3>
+				<ul>
+					<li>杨萌</li>
+					<li>张宇涵</li>
+					<li>王思慧</li>
+					<li>李雅莉</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var groups = {
+				relatives: {
+					title: '亲人',
+					person: ['爸爸','妈妈','姐姐','弟弟']
+				},
+				schoolmates: {
+					title: '同学',
+					person: ['陈强','刘晓霞','李静']
+				},
+				friends: {
+					title: '朋友',
+					person: ['杨萌','张宇涵','王思慧','李雅莉']
+				}
+			};
+
+			var wrap = document.getElementsByClassName('group-list')[0],
+				   titleList = wrap.getElementsByTagName('h3'),
+				   ulList = wrap.getElementsByTagName('ul'),
+				   length = titleList.length;
+			for(var i = 0; i < length; i++) {
+				titleList[i].gouzi = i;
+				titleList[i].onclick = function() {
+					this.className = !this.className  &&  'active'  || '';
+					ulList[this.gouzi].className = !ulList[this.gouzi].className && 'active'  || ''
+				};
+			}
+			
+		</script>
+	</body>
+</html>

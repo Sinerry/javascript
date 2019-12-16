@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="sel">
+        <option value="">请选择字颜色</option>
+        <option value="red">红色</option>
+        <option value="blue">蓝色</option>
+        <option value="pink">粉红色</option>
+    </select>
+    <p>2019年达到人生巅峰</p>
+    <script>
+        // 选择不同颜色选项 让p字颜色跟着变
+        // 事件 onchange
+        // 1 找到事件源-----下拉列表 
+        var oSel = document.getElementById("sel");
+        var oP = document.getElementsByTagName("p")[0];
+        // 2 注册事件
+        oSel.onchange = function() {
+            //alert(this.value);
+            // 3 事件处理 
+            oP.style.color = this.value;
+        }
+    </script>
+</body>
+</html>

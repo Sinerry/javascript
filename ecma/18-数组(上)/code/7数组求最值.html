@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var heights = [180,176,169,173,185,166];
+		/*
+			需求：找出heights中最大、最小值
+
+			思路：
+				假设一个最高的，然后让假设的这个跟后面依次做比较
+				如果后面有比假设的这个高，说明假设的那个就不是最好的，就把当前暂定为最好的，让暂定的这个再跟后面的依次做比较，依次类推，直到结束
+
+
+		*/
+
+		// 假设数组的最后一项最大
+		var max = heights[heights.length-1];
+		// 假设数组的最后一项最小
+		var min = heights[heights.length-1];
+		for(var i = 0 ; i < heights.length - 1; i++) {
+			if(max < heights[i]) {
+				max = heights[i];
+			}
+			if(min > heights[i]) {
+				min = heights[i];
+			}
+		}
+		console.log("最大数：" + max+"，最小值：" + min);
+
+
+
+		//将1-20存入数组中
+
+		// [1,2,3,...20]
+
+
+
+
+		var array = [];
+		for(var i = 1; i <= 20; i++) {
+			// array[i - 1] = i;
+			array[array.length] = i;
+		}
+		console.log(array);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

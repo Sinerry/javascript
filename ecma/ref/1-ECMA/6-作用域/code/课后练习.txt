@@ -1,0 +1,81 @@
+课后练习:
+下面每次弹出的结果是什么？
+
+1.
+	var a = 12;
+	function fn（） {　　
+	　　alert(a);　
+	　  var a = 45;　　
+	　　alert(a);　
+	}
+	fn();
+
+
+2.	
+   var a = 123;
+　　function fun() {
+　　 	alert(a);
+　　 	var a = 456;
+　　}
+　　fun();
+   alert(a);
+
+3.
+	var a = 123;
+　　function fun(a) {
+　　　　alert(a);
+　　　　a = 456;
+　　}
+　　fun(a);
+	alert(a);
+
+    alert(a);
+
+4. 
+	function fn() {　　
+	　　alert(12);
+	}
+	var as = fn();
+	alert(as);
+
+5. 	
+	var a = 12;　
+	function fn() {　　
+		alert(a);　
+		return 4;　　
+		var a = 45;
+	}
+	alert(fn());
+
+6. 
+	function test(a, b) {
+	　　alert(a);
+	　　alert(b);
+	　　var b = 234;
+	　　alert(b);
+	　　a = 123;
+	　　alert(a);
+
+	　　function a() {
+
+	   };
+	　　b = 234;
+	　　var b = function() {
+
+	   };
+	　　alert(a);
+	　　alert(b); 
+    }
+	test(1);
+
+7. 
+	alert(a);
+	var a = 100;　
+	function testResult() {　　
+	　　var b = 2 * a;　
+	　　var a = 200;　　
+	　　var c = a / 2;　
+	　　alert(b);
+	　　alert(c);
+	}
+	testResult();

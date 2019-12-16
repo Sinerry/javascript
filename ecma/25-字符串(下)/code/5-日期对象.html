@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+
+		// 1. 创建一个日期对象，new Date()
+		var date = new Date();
+		// console.log(date);// Wed Nov 20 2019 09:40:55 GMT+0800 (中国标准时间) 
+
+		// console.log(typeof date);// "object"
+
+		// 2. 让date对象工作 ，调用方法
+
+
+		// 获取年份
+		var year = date.getFullYear();
+		console.log(year);
+		// 获取月份
+		var month = date.getMonth();
+		console.log(month + 1);// 需要 +1（month是从零开始计数的）
+		// 获取多少号
+		var day = date.getDate();
+		console.log(day);
+		// 获取小时 
+		var hour = date.getHours();
+		console.log(hour);
+		// 获取分钟
+		var hour = date.getMinutes();
+		console.log(hour);
+		// 获取秒
+		var hour = date.getSeconds();
+		console.log(hour);
+		// 获取星期
+		var weekDay = date.getDay();
+		var weeks = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"]
+		console.log(weeks[weekDay]);// 星期三 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

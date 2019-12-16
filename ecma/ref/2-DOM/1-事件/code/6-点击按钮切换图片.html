@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button id='btn'>切换图片</button>
+	<img src="../img/1.jpg" id='img'>
+	<script>
+		/*
+			需求: 单击按钮切换图片 
+		*/
+		// 获取按钮和图片元素
+		 var oBtn = document.getElementById('btn');
+		 var oImg = document.getElementById('img');
+		 var flag = true;// true表示是第一张 
+		 // 保证代码的健壮性 
+		 if(oBtn) { 
+		 	// 事件源.事件名 = 事件处理程序;
+		 	oBtn.onclick = function() {
+		 		// 切换操作 只需更改图片的路径即可 改变的src属性
+		 		// if(flag) {
+		 		// 	oImg.src = '../img/2.jpg';
+		 		// }else {
+		 		// 	oImg.src = '../img/1.jpg';
+		 		// }
+		 		// oImg.src = flag ? '../img/2.jpg' : '../img/1.jpg';
+
+		 		oImg.src = '../img/'+(flag ? 2: 1)+'.jpg'
+		 		flag = !flag;
+
+
+
+		 		// flag = flag ? false : true;
+
+		 		
+		 	};
+		 }
+	</script>
+</body>
+</html>

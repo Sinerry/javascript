@@ -1,0 +1,124 @@
+下列代码，每次弹出什么？
+1.
+	var x = 1;
+	function a() {
+		alert(x++);// 1
+	}
+	function b() {
+		var x = 2;
+		a();
+	}
+	b();
+	alert(x);// 2
+
+
+
+
+
+
+
+
+
+
+
+2.
+	alert(x);
+	a();
+	var x = 2;
+	alert(x);
+	function a() {
+		alert(x);
+		var x = 1;
+		x--;
+		alert(x);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+3.
+	alert(x);
+	a();
+	var x = 2;
+	alert(x);
+	function a() {
+		alert(x);
+		x = 1;
+		x--;
+		alert(x);
+	}
+	alert(x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.
+	alert(x);
+	var x = 2;
+	a(x);
+	alert(x);
+	function a(x) {
+		alert(x);
+		x = 1;
+		x--;
+		alert(x);
+	}
+	alert(x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.
+	alert(x);
+	var x = 2;
+	a(x,--x);
+	alert(x);
+	function a(x,y) {
+		alert(x);
+		alert(y);
+		var y = 3;
+		x = 1;
+		x--;
+		alert(x);
+	}
+	alert(x);
+
+
+
+
+
+
+
+
+
+
+
+
+

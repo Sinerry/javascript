@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>
+        请输入用户名:<input type="text" value="请输入用户名" id="txt"/>
+    </label>
+    <span id="msg"></span>
+    <script>
+        // 文本框获得焦点 清空信息
+        // 获得焦点 onfocus
+        var txt = document.getElementById("txt");
+        var msg = document.getElementById("msg");
+        txt.onfocus = function() {
+            txt.value = ""; // this.value="" 
+        }
+        // 失去焦点  为空 提示不能为空
+        //       非数字  提示不合法
+        //       长度小于6 提示长度不够
+        //        数字  提示正确
+        txt.onblur = function() {
+            //  获取文本框的值
+            //alert(this.value);
+            var str = this.value;
+            if (str=="") {
+                msg.innerHTML = '不能为空'; 
+                msg.style.color = "red"; 
+                return;   
+            }
+            if (isNaN(str)) {
+                msg.innerHTML = '必须是数字'; 
+                msg.style.color = "red"; 
+                return;
+            }
+            if (str.length<6) {
+                msg.innerHTML = '长度不能低于6位'; 
+                msg.style.color = "red"; 
+                return;
+            }
+            msg.innerHTML = '用户名合法'; 
+            msg.style.color = "green"; 
+        }
+    </script>
+</body>
+</html>
